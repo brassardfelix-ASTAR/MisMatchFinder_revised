@@ -181,18 +181,43 @@ impl Fragment {
     }
 
     pub fn reads_agree(&self, mm: &Mismatch) -> Option<bool> {
-        if self.reads.len() < 2 {
-            return None;
-        }
-        let pos = mm.pos_in_read?;
-        let r1 = &self.reads[0];
-        let r2 = &self.reads[1];
-
-        let base1 = r1.get_read_seq().get(pos)?;
-        let base2 = r2.get_read_seq().get(pos)?;
-
-        Some(base1 == base2)
+    if self.reads.len() < 2 {
+        return None;
     }
+    let r1 = &self.reads[0];
+    let r2 = &self.reads[1];
+
+    match mm.typ {
+        MismatchType::SBS => {
+            // SBS: position is the center base (1-based)
+            let ref_pos = mm.position as i64;
+
+            let p1 = r1.ref_to_read_pos(ref_pos)?;
+            let p2 = r2.ref_to_read_pos(ref_pos)?;
+
+            // Compare bases regardless of qual (read2 may be zeroed on purpose when agreeing)
+            let b1 = *r1.get_read_seq().get(p1)?;
+            let b2 = *r2.get_read_seq().get(p2)?;
+            Some(b1 == b2)
+        }
+        MismatchType::DBS => {
+            // DBS: position is the leftmost base (1-based)
+            let left  = mm.position as i64;
+            let right = left + 1;
+
+            let p1a = r1.ref_to_read_pos(left)?;  let p1b = r1.ref_to_read_pos(right)?;
+            let p2a = r2.ref_to_read_pos(left)?;  let p2b = r2.ref_to_read_pos(right)?;
+
+            let s1a = *r1.get_read_seq().get(p1a)?; let s1b = *r1.get_read_seq().get(p1b)?;
+            let s2a = *r2.get_read_seq().get(p2a)?; let s2b = *r2.get_read_seq().get(p2b)?;
+            Some(s1a == s2a && s1b == s2b)
+        }
+        MismatchType::INS | MismatchType::DEL => None,
+    }
+}
+
+
+
 
     pub fn make_se_fragment(read: GappedRead, chrom: &String) -> Self {
         Fragment {
