@@ -1,0 +1,48 @@
+TARGET = Some("x86_64-unknown-linux-gnu")
+OPT_LEVEL = Some("0")
+HOST = Some("x86_64-unknown-linux-gnu")
+CC_x86_64-unknown-linux-gnu = None
+CC_x86_64_unknown_linux_gnu = None
+HOST_CC = None
+CC = None
+CFLAGS_x86_64-unknown-linux-gnu = None
+CFLAGS_x86_64_unknown_linux_gnu = None
+HOST_CFLAGS = None
+CFLAGS = None
+CRATE_CC_NO_DEFAULTS = None
+DEBUG = Some("true")
+CARGO_CFG_TARGET_FEATURE = Some("fxsr,sse,sse2,x87")
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/aligned_malloc.o" "-c" "libdeflate/lib/aligned_malloc.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/deflate_decompress.o" "-c" "libdeflate/lib/deflate_decompress.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/arm/cpu_features.o" "-c" "libdeflate/lib/arm/cpu_features.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/x86/cpu_features.o" "-c" "libdeflate/lib/x86/cpu_features.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/deflate_compress.o" "-c" "libdeflate/lib/deflate_compress.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/adler32.o" "-c" "libdeflate/lib/adler32.c"
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/zlib_decompress.o" "-c" "libdeflate/lib/zlib_decompress.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/zlib_compress.o" "-c" "libdeflate/lib/zlib_compress.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/crc32.o" "-c" "libdeflate/lib/crc32.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/gzip_decompress.o" "-c" "libdeflate/lib/gzip_decompress.c"
+exit status: 0
+running: "cc" "-O0" "-ffunction-sections" "-fdata-sections" "-fPIC" "-g" "-fno-omit-frame-pointer" "-m64" "-I" "libdeflate/" "-I" "libdeflate/lib/" "-I" "libdeflate/common/" "-o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/gzip_compress.o" "-c" "libdeflate/lib/gzip_compress.c"
+exit status: 0
+exit status: 0
+AR_x86_64-unknown-linux-gnu = None
+AR_x86_64_unknown_linux_gnu = None
+HOST_AR = None
+AR = None
+running: ZERO_AR_DATE="1" "ar" "cq" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate.a" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/aligned_malloc.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/deflate_decompress.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/arm/cpu_features.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/x86/cpu_features.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/deflate_compress.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/adler32.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/zlib_decompress.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/zlib_compress.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/crc32.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/gzip_decompress.o" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate/lib/gzip_compress.o"
+exit status: 0
+running: "ar" "s" "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib/libdeflate.a"
+exit status: 0
+cargo:rustc-link-lib=static=deflate
+cargo:rustc-link-search=native=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/lib
+cargo:root=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out
+cargo:include=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libdeflate-sys-8c4083ea1984c3a8/out/include

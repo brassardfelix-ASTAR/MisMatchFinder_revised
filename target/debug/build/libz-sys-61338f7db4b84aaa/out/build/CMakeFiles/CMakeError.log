@@ -1,0 +1,75 @@
+Performing C SOURCE FILE Test HAVE_AVX512_INTRIN failed with the following output:
+Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_9b953/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9b953.dir/build.make CMakeFiles/cmTC_9b953.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9b953.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX512_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_9b953.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp/src.c
+cc1: error: bad value (‘cascadelake’) for ‘-mtune=’ switch
+cc1: note: valid arguments to ‘-mtune=’ switch are: nocona core2 nehalem corei7 westmere sandybridge corei7-avx ivybridge core-avx-i haswell core-avx2 broadwell skylake skylake-avx512 cannonlake icelake-client icelake-server bonnell atom silvermont slm knl knm intel x86-64 eden-x2 nano nano-1000 nano-2000 nano-3000 nano-x2 eden-x4 nano-x4 k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3 athlon-fx amdfam10 barcelona bdver1 bdver2 bdver3 bdver4 znver1 btver1 btver2 generic native; did you mean ‘cannonlake’?
+gmake[1]: *** [CMakeFiles/cmTC_9b953.dir/build.make:85: CMakeFiles/cmTC_9b953.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_9b953/fast] Error 2
+
+
+Source file was:
+#include <immintrin.h>
+        int main(void) {
+            __m512i x = _mm512_set1_epi8(2);
+            const __m512i y = _mm512_set_epi8(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                              20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
+                                              38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
+                                              56, 57, 58, 59, 60, 61, 62, 63, 64);
+            x = _mm512_sub_epi8(x, y);
+            (void)x;
+            return 0;
+        }
+Performing C SOURCE FILE Test HAVE_MASK_INTRIN failed with the following output:
+Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_12fd7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_12fd7.dir/build.make CMakeFiles/cmTC_12fd7.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_12fd7.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_MASK_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_12fd7.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp/src.c
+cc1: error: bad value (‘cascadelake’) for ‘-mtune=’ switch
+cc1: note: valid arguments to ‘-mtune=’ switch are: nocona core2 nehalem corei7 westmere sandybridge corei7-avx ivybridge core-avx-i haswell core-avx2 broadwell skylake skylake-avx512 cannonlake icelake-client icelake-server bonnell atom silvermont slm knl knm intel x86-64 eden-x2 nano nano-1000 nano-2000 nano-3000 nano-x2 eden-x4 nano-x4 k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3 athlon-fx amdfam10 barcelona bdver1 bdver2 bdver3 bdver4 znver1 btver1 btver2 generic native; did you mean ‘cannonlake’?
+gmake[1]: *** [CMakeFiles/cmTC_12fd7.dir/build.make:85: CMakeFiles/cmTC_12fd7.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_12fd7/fast] Error 2
+
+
+Source file was:
+#include <immintrin.h>
+        int main(void) {
+            __mmask16 a = 0xFF;
+            a = _knot_mask16(a);
+            (void)a;
+            return 0;
+        }
+Performing C SOURCE FILE Test HAVE_AVX512VNNI_INTRIN failed with the following output:
+Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/gmake cmTC_92e45/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_92e45.dir/build.make CMakeFiles/cmTC_92e45.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_92e45.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX512VNNI_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_92e45.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp/src.c
+cc1: error: bad value (‘cascadelake’) for ‘-mtune=’ switch
+cc1: note: valid arguments to ‘-mtune=’ switch are: nocona core2 nehalem corei7 westmere sandybridge corei7-avx ivybridge core-avx-i haswell core-avx2 broadwell skylake skylake-avx512 cannonlake icelake-client icelake-server bonnell atom silvermont slm knl knm intel x86-64 eden-x2 nano nano-1000 nano-2000 nano-3000 nano-x2 eden-x4 nano-x4 k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3 athlon-fx amdfam10 barcelona bdver1 bdver2 bdver3 bdver4 znver1 btver1 btver2 generic native; did you mean ‘cannonlake’?
+gmake[1]: *** [CMakeFiles/cmTC_92e45.dir/build.make:85: CMakeFiles/cmTC_92e45.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/build/libz-sys-61338f7db4b84aaa/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_92e45/fast] Error 2
+
+
+Source file was:
+#include <immintrin.h>
+        int main(void) {
+            __m512i x = _mm512_set1_epi8(2);
+            const __m512i y = _mm512_set_epi8(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
+                                              20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37,
+                                              38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55,
+                                              56, 57, 58, 59, 60, 61, 62, 63, 64);
+            __m512i z = _mm512_setzero_epi32();
+            z = _mm512_dpbusd_epi32(z, x, y);
+            (void)z;
+            return 0;
+        }

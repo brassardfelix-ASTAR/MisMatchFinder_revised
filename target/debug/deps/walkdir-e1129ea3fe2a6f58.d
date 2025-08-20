@@ -1,0 +1,10 @@
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/deps/walkdir-e1129ea3fe2a6f58.d: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/lib.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/dent.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/error.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/util.rs
+
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/deps/libwalkdir-e1129ea3fe2a6f58.rlib: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/lib.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/dent.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/error.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/util.rs
+
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/deps/libwalkdir-e1129ea3fe2a6f58.rmeta: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/lib.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/dent.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/error.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/util.rs
+
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/lib.rs:
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/dent.rs:
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/error.rs:
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/walkdir-2.3.2/src/util.rs:

@@ -1,0 +1,1 @@
+{"rustc":17579050839371905563,"features":"[]","declared_features":"[\"large-dates\"]","target":6526372140780347009,"profile":1369601567987815722,"path":5369886255760538491,"deps":[],"local":[{"CheckDepInfo":{"dep_info":"release/.fingerprint/time-macros-2a76d0d3414c96a8/dep-lib-time_macros","checksum":false}}],"rustflags":[],"config":2069994364910194474,"compile_kind":0}

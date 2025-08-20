@@ -1,0 +1,10 @@
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/deps/colored-890157d408efeb78.d: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/lib.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/color.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/control.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/style.rs
+
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/deps/libcolored-890157d408efeb78.rlib: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/lib.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/color.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/control.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/style.rs
+
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/debug/deps/libcolored-890157d408efeb78.rmeta: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/lib.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/color.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/control.rs /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/style.rs
+
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/lib.rs:
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/color.rs:
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/control.rs:
+/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/colored-2.0.0/src/style.rs:

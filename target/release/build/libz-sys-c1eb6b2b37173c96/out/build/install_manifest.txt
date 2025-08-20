@@ -1,0 +1,5 @@
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/libz.a
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zlib.h
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zlib_name_mangling.h
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zconf.h
+/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/pkgconfig/zlib.pc

@@ -1,0 +1,2 @@
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/typenum-0524adb7800ee457/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/typenum-0524adb7800ee457/out/op.rs
