@@ -8,22 +8,15 @@ use crate::bamreader::MismatchMeta;
 
 use crate::bamreader::mismatch::{Mismatch, MismatchType};
 
-/// Return (1-based VCF POS, REF, ALT) with SBS context collapsed to the middle base.
-/// Falls back to original alleles for DBS/indels/edge cases.
 fn vcf_pos_and_alleles_pos1(m: &Mismatch) -> (u32, Vec<u8>, Vec<u8>) {
     match m.typ {
         MismatchType::SBS if m.reference.len() == 3 && m.alternative.len() == 3 => {
-            // Stored position is the LEFTMOST of the 3 bases (1-based).
-            // For SBS we want the MIDDLE base and POS shifted by +1.
-            let pos1 = m.position + 1;
+            let pos1 = m.position;           // CENTER already
             let r = vec![m.reference[1]];
             let a = vec![m.alternative[1]];
             (pos1, r, a)
         }
-        _ => {
-            // Keep original representation
-            (m.position, m.reference.clone(), m.alternative.clone())
-        }
+        _ => (m.position, m.reference.clone(), m.alternative.clone()),
     }
 }
 

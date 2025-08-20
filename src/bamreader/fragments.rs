@@ -18,7 +18,18 @@ use crate::bamreader::mismatch::MismatchType;
 use super::cigar::GappedRead;
 use super::mismatch::Mismatch;
 
+fn is_real_sbs(ref_seq: &[u8], alt_seq: &[u8]) -> bool {
+    // Must be a tri-nucleotide context with no gaps on neighbors
+    // and the center base must differ.
+    ref_seq.len() == 3
+        && alt_seq.len() == 3
+        && ref_seq[0] != b'-' && ref_seq[2] != b'-'
+        && alt_seq[0] != b'-' && alt_seq[2] != b'-'
+        && ref_seq[1] != alt_seq[1]
+}
+
 impl Fragment {
+
     pub fn make_fragment(
         mut read1: GappedRead,
         mut read2: GappedRead,
@@ -274,7 +285,7 @@ impl Fragment {
                         // safest is to mark pos_in_read as unknown here
                         let pos_in_read = None;
 
-                        // we dont have to worry about making a dbs with a deletion, so we push it right away
+                        // DEL: position is leftmost base (1-based)
                         ret.push(Mismatch {
                             chromosome: self.chrom.to_string(),
                             rid: read.tid(),
@@ -309,12 +320,25 @@ impl Fragment {
 
                         // drop cases where neighbors are gaps
                         if alt_seq[0] == b'-' || alt_seq[2] == b'-' {
+                            ref_index += 1;
                             continue;
                         }
 
                         let mut ref_seq = alt_seq.clone();
                         //and change according to MD to get the ref string
                         ref_seq[1] = change;
+
+                        // ROOT FIX: if the center base matches the reference, this is NOT a mismatch.
+                        if !is_real_sbs(&ref_seq, &alt_seq) {
+                            // If a previous mismatch was pending, flush it (it was valid),
+                            // and skip this position.
+                            if let Some(v) = prev_mismatch.take() {
+                                ret.push(v);
+                            }
+                            // advance past this MD position
+                            ref_index += 1;
+                            continue;
+                        }
 
                         //if we have that, we need to check if there is another base change just behind
                         if let Some(mm) = prev_mismatch {
@@ -330,7 +354,20 @@ impl Fragment {
                                     // and shorten as well
                                     ref_seq.pop();
 
-                                    let pos_in_read = read.ref_to_read_pos(ref_pos[ref_index]);
+                                    // GUARD: the second (current) base must be a real mismatch
+                                    if ref_seq[1] == alt_seq[1] {
+                                        // new site isn't a true mismatch — keep the previous SBS
+                                        ret.push(mm);
+                                        prev_mismatch = None;
+                                        ref_index += 1;
+                                        continue;
+                                    }
+
+                                    // DBS harmonization:
+                                    // - position: LEFTMOST base (1-based) => start + ref_index
+                                    // - pos_in_read: LEFTMOST base
+                                    let left_ref_pos = ref_pos[ref_index - 1];
+                                    let pos_in_read = read.ref_to_read_pos(left_ref_pos);
 
                                     prev_mismatch = Some(Mismatch {
                                         quality: (mm.quality + read.get_read_qual()[ref_index]) / 2,
@@ -356,6 +393,7 @@ impl Fragment {
 
                                 let pos_in_read = read.ref_to_read_pos(ref_pos[ref_index]);
 
+                                // SBS: position is CENTER base (1-based) => start + ref_index + 1
                                 prev_mismatch = Some(Mismatch {
                                     quality: read.get_read_qual()[ref_index],
                                     chromosome: self.chrom.to_string(),
@@ -385,6 +423,7 @@ impl Fragment {
 
                                 let pos_in_read = read.ref_to_read_pos(ref_pos[ref_index]);
 
+                                // SBS: position is CENTER base (1-based) => start + ref_index + 1
                                 prev_mismatch = Some(Mismatch {
                                     quality: read.get_read_qual()[ref_index],
                                     chromosome: self.chrom.to_string(),
@@ -432,6 +471,9 @@ impl Fragment {
             }
         }
 
+        // Final belt & suspenders: never emit no-op variants
+        ret.retain(|m| m.reference != m.alternative);
+
         ret
     }
 
@@ -463,3 +505,4 @@ impl Fragment {
         None
     }
 }
+
