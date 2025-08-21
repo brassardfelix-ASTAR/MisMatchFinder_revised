@@ -1,6 +1,6 @@
 use std::{
     cmp::{max, min},
-    collections::{BTreeMap, HashMap},
+    collections::{BTreeMap, HashMap, HashSet},
     ops::RangeInclusive,
 };
 
@@ -23,7 +23,7 @@ pub mod mismatch;
 
 /// Normalize a Mismatch for use as a map key so fragments at the same locus coalesce
 /// without altering allele strings expected by downstream filters (e.g., germline).
-/// - Keep REF/ALT exactly as constructed upstream (SBS 3-mer, DBS 2-mer, indels as-is)
+/// - Keep REF/ALT exactly as constructed upstream (SBS 3-mer, DBS 2-mer, indels unchanged)
 /// - Strip per-fragment/read fields that should NOT shard grouping
 fn canonical_key(mut m: Mismatch) -> Mismatch {
     // DO NOT collapse REF/ALT here; germline filter expects SBS as 3-mer.
@@ -37,9 +37,32 @@ fn canonical_key(mut m: Mismatch) -> Mismatch {
     m
 }
 
+/// Make a stable "pair id" from a read's QNAME so both mates share the same ID.
+/// Strips common PE suffixes like "/1" or "/2", and Illumina lane suffixes " ... 1:N:0:..." etc.
+fn pair_id_from_record(rec: &Record) -> String {
+    let mut id = std::str::from_utf8(rec.qname()).unwrap_or_default().to_string();
+    // trailing "/1" or "/2"
+    if id.ends_with("/1") || id.ends_with("/2") {
+        id.truncate(id.len() - 2);
+        return id;
+    }
+    // Illumina style: "... 1:N:0:ACGT" or "... 2:N:0:ACGT"
+    if let Some(space_idx) = id.rfind(' ') {
+        let (left, right) = id.split_at(space_idx + 1);
+        if right.starts_with('1') || right.starts_with('2') {
+            return left.trim_end().to_string();
+        }
+    }
+    id
+}
+
 #[derive(Debug, Default)]
 pub struct MismatchMeta {
+    // Unique pair ids (for correct RP_COUNT)
+    pub rp_set: HashSet<String>,
+    // Short preview list for VCF (bounded; values drawn from rp_set insertion order)
     pub rp_names: Vec<String>,
+
     pub mapq: Vec<u8>,
     pub nm: Vec<u8>,
     pub frag_len: Vec<u32>,
@@ -47,6 +70,44 @@ pub struct MismatchMeta {
     pub pos_in_read: Vec<usize>,
     pub overlap: Option<bool>,
     pub agree: Option<bool>,
+}
+
+impl MismatchMeta {
+    /// Add one fragment/read's contribution into the meta
+    fn add_fragment(
+        &mut self,
+        pair_id: String,
+        mapq: u8,
+        nm: u8,
+        frag_len: u32,
+        strand: Option<char>,
+        pos_in_read: Option<usize>,
+        overlap: Option<bool>,
+        agree: Option<bool>,
+    ) {
+        // Dedup RP while keeping a small preview list
+        if self.rp_set.insert(pair_id.clone()) {
+            if self.rp_names.len() < 10 {
+                self.rp_names.push(pair_id);
+            }
+        }
+        self.mapq.push(mapq);
+        self.nm.push(nm);
+        self.frag_len.push(frag_len);
+        if let Some(s) = strand {
+            self.strand.push(s.to_string());
+        }
+        if let Some(p) = pos_in_read {
+            self.pos_in_read.push(p);
+        }
+        // These are per-variant flags; if already set, leave as-is, otherwise set.
+        if self.overlap.is_none() {
+            self.overlap = overlap;
+        }
+        if self.agree.is_none() {
+            self.agree = agree;
+        }
+    }
 }
 
 // Make the thresholds u8 to match NM getter and avoid i8/u8 clashes
@@ -176,19 +237,17 @@ pub fn find_mismatches(
                         let key = canonical_key(mm.clone());
                         let entry = mismatch_store.entry(key).or_default();
 
-                        // avoid accidental dup names
-                        if !entry.rp_names.contains(&qname) {
-                            entry.rp_names.push(qname.clone());
-                        }
-                        entry.mapq.push(record.mapq());
-                        entry.nm.push(get_edit_distance(&record));
-                        entry.frag_len.push(record.seq_len() as u32);
-                        if let Some(strand) = frag.strand() {
-                            entry.strand.push(strand.to_string());
-                        }
-                        if let Some(pos) = mm.pos_in_read {
-                            entry.pos_in_read.push(pos);
-                        }
+                        let pair_id = pair_id_from_record(&record);
+                        entry.add_fragment(
+                            pair_id,
+                            record.mapq(),
+                            get_edit_distance(&record),
+                            record.seq_len() as u32,   // SE: use read length
+                            frag.strand(),             // Option<char>
+                            mm.pos_in_read,            // Option<usize>
+                            None,                      // overlap NA for SE
+                            None,                      // agree NA for SE
+                        );
                     }
                 } else {
                     debug!("Discarded read due to whitelist check");
@@ -284,24 +343,24 @@ pub fn find_mismatches(
                             let key = canonical_key(mm.clone());
                             let entry = mismatch_store.entry(key).or_default();
 
-                            if !entry.rp_names.contains(&qname) {
-                                entry.rp_names.push(qname.clone());
-                            }
-                            entry.mapq.push(record.mapq());
-                            entry.nm.push(get_edit_distance(&record));
-                            entry.frag_len.push(record.seq_len() as u32);
+                            let pair_id = pair_id_from_record(&record);
+                            let (overlap_flag, agree_flag, strand_char) = if let Some(v) = &frag {
+                                (Some(v.is_overlapping()), v.reads_agree(&mm), v.strand())
+                            } else {
+                                (None, None, None)
+                            };
 
-                            if let Some(v) = &frag {
-                                if let Some(strand) = v.strand() {
-                                    entry.strand.push(strand.to_string());
-                                }
-                                // Fragment-level overlap / agree
-                                entry.overlap = Some(v.is_overlapping());
-                                entry.agree = v.reads_agree(&mm);
-                            }
-                            if let Some(pos) = mm.pos_in_read {
-                                entry.pos_in_read.push(pos);
-                            }
+                            // Use read length to preserve prior behavior; switch to insert_size().abs() if desired.
+                            entry.add_fragment(
+                                pair_id,
+                                record.mapq(),
+                                get_edit_distance(&record),
+                                record.seq_len() as u32,
+                                strand_char,          // Option<char>
+                                mm.pos_in_read,       // Option<usize>
+                                overlap_flag,
+                                agree_flag,
+                            );
                         }
                     } else {
                         debug!("Discarded read pair due to whitelist check");
@@ -353,3 +412,4 @@ fn get_edit_distance(read: &Record) -> u8 {
         _ => 0,
     }
 }
+
