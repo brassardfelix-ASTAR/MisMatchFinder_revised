@@ -5,7 +5,7 @@ use std::path::PathBuf;
 
 use bgzip::BGZFWriter;
 use crate::bamreader::MismatchMeta;
-
+use std::collections::HashSet;
 use crate::bamreader::mismatch::{Mismatch, MismatchType};
 
 fn vcf_pos_and_alleles_pos1(m: &Mismatch) -> (u32, Vec<u8>, Vec<u8>) {
@@ -100,8 +100,18 @@ pub fn write_vcf(
             Some((lo, hi))
         };
 
+
+        // Unique RP count (dedupe by read-pair name)
+        let rp_count_unique = {
+            let mut set: HashSet<&str> = HashSet::new();
+            for n in &meta.rp_names {
+                set.insert(n.as_str());
+            }
+            set.len()
+        };
+
         let info = mm.to_vcf_info(
-            Some(meta.rp_names.len()),               // RP_COUNT
+            Some(rp_count_unique),               // RP_COUNT
             meta.overlap,                            // OVERLAP flag
             meta.agree,                              // AGREE
             Some((min_mapq, max_mapq)),              // MAPQ min..max
