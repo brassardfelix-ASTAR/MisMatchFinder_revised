@@ -71,22 +71,6 @@ impl GappedRead {
     pub fn get_insertions_mut(&mut self) -> &mut Vec<Mismatch> {
         &mut self.inserts
     }
-
-    pub fn ref_to_read_pos(&self, target_ref_pos: i64) -> Option<usize> {
-        // Primary lookup from precomputed map
-        if let Some(pos) = self.ref_to_read_map.get(&target_ref_pos) {
-            return Some(*pos);
-        }
-
-        // Optional fallback: reconstruct from gapped_pos if map is missing
-        for (read_idx, &ref_pos) in self.gapped_pos.iter().enumerate() {
-            if ref_pos == target_ref_pos {
-                return Some(read_idx);
-            }
-        }
-
-        None
-    }
 }
 
 use std::{collections::HashMap, panic};
@@ -141,15 +125,13 @@ pub fn parse_cigar_str(read: &bam::Record, chrom: &String) -> GappedRead {
                     let ref_seq: Vec<u8> = Vec::from([read.seq()[idx]]);
                     let mut alt_seq = Vec::new();
                     let mut qual: u32 = 0;
-
+                    // this is one longer because we need to ref start
                     for x in 0..=*n {
                         let x = idx + x as usize;
                         alt_seq.push(read.seq()[x]);
                         qual += read.qual()[x] as u32;
                     }
-
-                    // this is one longer because we need to ref start
-                    let mismatch = Mismatch {
+                    mismatches.push(Mismatch {
                         chromosome: chrom.to_string(),
                         position: ref_pos as u32,
                         reference: ref_seq,
@@ -157,15 +139,10 @@ pub fn parse_cigar_str(read: &bam::Record, chrom: &String) -> GappedRead {
                         quality: (qual / (n + 1)) as u8,
                         typ: super::mismatch::MismatchType::INS,
                         rid: read.tid(),
-
-                        // New fields
-                        fragment_length: None, // will be enriched later
-                        read_orientation: None,
-                        region_tag: None,
-                        pos_in_read: None,
-                    };
-                    mismatches.push(mismatch);
+                    });
                 }
+                // and we remove that part of the read
+                i += n;
             }
             Cigar::Del(n) | Cigar::RefSkip(n) => {
                 //in a deletion, we add dashes to show the deletion

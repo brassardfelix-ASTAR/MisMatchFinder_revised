@@ -10,15 +10,15 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/3.18.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/3.18.2/CompilerIdC/a.out"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_1d087/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1d087.dir/build.make CMakeFiles/cmTC_1d087.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64    -v -std=c11 -o CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+Run Build Command(s):/usr/bin/gmake cmTC_728f2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_728f2.dir/build.make CMakeFiles/cmTC_728f2.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64    -v -std=c11 -o CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 OFFLOAD_TARGET_NAMES=nvptx-none
@@ -27,8 +27,8 @@ Target: x86_64-redhat-linux
 Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
 Thread model: posix
 gcc version 8.4.1 20200928 (Red Hat 8.4.1-1) (GCC) 
-COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/8/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -std=c11 -version -ffunction-sections -fdata-sections -fPIC -o /tmp/ccwDNmIY.s
+COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -std=c11 -version -ffunction-sections -fdata-sections -fPIC -o /tmp/ccWFXLYE.s
 GNU C11 (GCC) version 8.4.1 20200928 (Red Hat 8.4.1-1) (x86_64-redhat-linux)
 	compiled by GNU C version 8.4.1 20200928 (Red Hat 8.4.1-1), GMP version 6.1.2, MPFR version 3.1.6-p2, MPC version 1.0.2, isl version isl-0.16.1-GMP
 
@@ -48,15 +48,15 @@ GNU C11 (GCC) version 8.4.1 20200928 (Red Hat 8.4.1-1) (x86_64-redhat-linux)
 warning: MPC header version 1.0.2 differs from library version 1.1.0.
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 4200654a8a5e4de8e22bfb5ed3a1f615
-COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o /tmp/ccwDNmIY.s
+COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o /tmp/ccWFXLYE.s
 GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-93.el8
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
-Linking C executable cmTC_1d087
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d087.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64   -v CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -o cmTC_1d087 
+COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+Linking C executable cmTC_728f2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_728f2.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64   -v CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -o cmTC_728f2 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper
@@ -68,10 +68,10 @@ Thread model: posix
 gcc version 8.4.1 20200928 (Red Hat 8.4.1-1) (GCC) 
 COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-o' 'cmTC_1d087' '-mtune=generic' '-march=x86-64'
- /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0Cf0IV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1d087 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
-COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-o' 'cmTC_1d087' '-mtune=generic' '-march=x86-64'
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-o' 'cmTC_728f2' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgGx4wh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_728f2 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-o' 'cmTC_728f2' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
@@ -90,12 +90,12 @@ Parsed C implicit include dir info from above output: rv=done
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_1d087/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1d087.dir/build.make CMakeFiles/cmTC_1d087.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64    -v -std=c11 -o CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_728f2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_728f2.dir/build.make CMakeFiles/cmTC_728f2.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64    -v -std=c11 -o CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
@@ -104,8 +104,8 @@ Parsed C implicit link information from above output:
   ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl --disable-libmpx --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
   ignore line: [Thread model: posix]
   ignore line: [gcc version 8.4.1 20200928 (Red Hat 8.4.1-1) (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -std=c11 -version -ffunction-sections -fdata-sections -fPIC -o /tmp/ccwDNmIY.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -m64 -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -std=c11 -version -ffunction-sections -fdata-sections -fPIC -o /tmp/ccWFXLYE.s]
   ignore line: [GNU C11 (GCC) version 8.4.1 20200928 (Red Hat 8.4.1-1) (x86_64-redhat-linux)]
   ignore line: [	compiled by GNU C version 8.4.1 20200928 (Red Hat 8.4.1-1)  GMP version 6.1.2  MPFR version 3.1.6-p2  MPC version 1.0.2  isl version isl-0.16.1-GMP]
   ignore line: []
@@ -125,15 +125,15 @@ Parsed C implicit link information from above output:
   ignore line: [warning: MPC header version 1.0.2 differs from library version 1.1.0.]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 4200654a8a5e4de8e22bfb5ed3a1f615]
-  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o /tmp/ccwDNmIY.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o /tmp/ccWFXLYE.s]
   ignore line: [GNU assembler version 2.30 (x86_64-redhat-linux) using BFD version version 2.30-93.el8]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking C executable cmTC_1d087]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d087.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64   -v CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -o cmTC_1d087 ]
+  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-std=c11' '-o' 'CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking C executable cmTC_728f2]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_728f2.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64   -v CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -o cmTC_728f2 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper]
@@ -145,13 +145,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 8.4.1 20200928 (Red Hat 8.4.1-1) (GCC) ]
   ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/8/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/8/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-o' 'cmTC_1d087' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0Cf0IV.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1d087 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-ffunction-sections' '-fdata-sections' '-fPIC' '-m64' '-v' '-o' 'cmTC_728f2' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/8/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgGx4wh.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_728f2 /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/8 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/8/../../.. CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/8/crtend.o /usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crtn.o]
     arg [/usr/libexec/gcc/x86_64-redhat-linux/8/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/libexec/gcc/x86_64-redhat-linux/8/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/8/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc0Cf0IV.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccgGx4wh.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -166,7 +166,7 @@ Parsed C implicit link information from above output:
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_1d087] ==> ignore
+    arg [cmTC_728f2] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/../../../../lib64/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-redhat-linux/8/crtbegin.o] ==> ignore
@@ -175,7 +175,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
     arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
     arg [-L/usr/lib/gcc/x86_64-redhat-linux/8/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/8/../../..]
-    arg [CMakeFiles/cmTC_1d087.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_728f2.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -198,186 +198,186 @@ Parsed C implicit link information from above output:
 
 
 Performing C SOURCE FILE Test FNO_LTO_AVAILABLE succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_688db/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_688db.dir/build.make CMakeFiles/cmTC_688db.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_688db.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DFNO_LTO_AVAILABLE -fno-lto -std=c11 -o CMakeFiles/cmTC_688db.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_688db
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_688db.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DFNO_LTO_AVAILABLE -fno-lto CMakeFiles/cmTC_688db.dir/src.c.o -o cmTC_688db 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_d0afc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d0afc.dir/build.make CMakeFiles/cmTC_d0afc.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d0afc.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DFNO_LTO_AVAILABLE -fno-lto -std=c11 -o CMakeFiles/cmTC_d0afc.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d0afc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d0afc.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DFNO_LTO_AVAILABLE -fno-lto CMakeFiles/cmTC_d0afc.dir/src.c.o -o cmTC_d0afc 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
 int main() { return 0; }
 Determining if the include file sys/auxv.h exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_6ca92/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6ca92.dir/build.make CMakeFiles/cmTC_6ca92.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6ca92.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_6ca92.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_6ca92
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ca92.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_6ca92.dir/CheckIncludeFile.c.o -o cmTC_6ca92 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_774e9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_774e9.dir/build.make CMakeFiles/cmTC_774e9.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_774e9.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_774e9.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_774e9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_774e9.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_774e9.dir/CheckIncludeFile.c.o -o cmTC_774e9 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the include file sys/sdt.h exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_394e1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_394e1.dir/build.make CMakeFiles/cmTC_394e1.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_394e1.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_394e1.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_394e1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_394e1.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_394e1.dir/CheckIncludeFile.c.o -o cmTC_394e1 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_fc5ac/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fc5ac.dir/build.make CMakeFiles/cmTC_fc5ac.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fc5ac.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_fc5ac.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_fc5ac
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fc5ac.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_fc5ac.dir/CheckIncludeFile.c.o -o cmTC_fc5ac 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the include file unistd.h exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_bce7f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_bce7f.dir/build.make CMakeFiles/cmTC_bce7f.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bce7f.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_bce7f.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_bce7f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bce7f.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_bce7f.dir/CheckIncludeFile.c.o -o cmTC_bce7f 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_6804b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6804b.dir/build.make CMakeFiles/cmTC_6804b.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6804b.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_6804b.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_6804b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6804b.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_6804b.dir/CheckIncludeFile.c.o -o cmTC_6804b 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the include file sys/types.h exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_45981/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_45981.dir/build.make CMakeFiles/cmTC_45981.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_45981.dir/CheckIncludeFile.c.o
-/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_45981.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_45981
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45981.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_45981.dir/CheckIncludeFile.c.o -o cmTC_45981 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_cc4cd/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_cc4cd.dir/build.make CMakeFiles/cmTC_cc4cd.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cc4cd.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_cc4cd.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cc4cd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc4cd.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_cc4cd.dir/CheckIncludeFile.c.o -o cmTC_cc4cd 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the include file stdint.h exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_6ee1f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6ee1f.dir/build.make CMakeFiles/cmTC_6ee1f.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6ee1f.dir/CheckIncludeFile.c.o
-/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_6ee1f.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_6ee1f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ee1f.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_6ee1f.dir/CheckIncludeFile.c.o -o cmTC_6ee1f 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_a6d2f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a6d2f.dir/build.make CMakeFiles/cmTC_a6d2f.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6d2f.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_a6d2f.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a6d2f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6d2f.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_a6d2f.dir/CheckIncludeFile.c.o -o cmTC_a6d2f 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the include file stddef.h exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_d6730/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d6730.dir/build.make CMakeFiles/cmTC_d6730.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d6730.dir/CheckIncludeFile.c.o
-/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_d6730.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-Linking C executable cmTC_d6730
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6730.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_d6730.dir/CheckIncludeFile.c.o -o cmTC_d6730 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_185ce/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_185ce.dir/build.make CMakeFiles/cmTC_185ce.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_185ce.dir/CheckIncludeFile.c.o
+/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_185ce.dir/CheckIncludeFile.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_185ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_185ce.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_185ce.dir/CheckIncludeFile.c.o -o cmTC_185ce 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining size of off64_t passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_858dc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_858dc.dir/build.make CMakeFiles/cmTC_858dc.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_858dc.dir/OFF64_T.c.o
-/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_858dc.dir/OFF64_T.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CheckTypeSize/OFF64_T.c
-Linking C executable cmTC_858dc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_858dc.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_858dc.dir/OFF64_T.c.o -o cmTC_858dc 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_b7a69/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b7a69.dir/build.make CMakeFiles/cmTC_b7a69.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7a69.dir/OFF64_T.c.o
+/usr/bin/cc -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -ffunction-sections -fdata-sections -fPIC -m64  -std=c11 -o CMakeFiles/cmTC_b7a69.dir/OFF64_T.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CheckTypeSize/OFF64_T.c
+Linking C executable cmTC_b7a69
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7a69.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64  CMakeFiles/cmTC_b7a69.dir/OFF64_T.c.o -o cmTC_b7a69 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the function fseeko exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9a444/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9a444.dir/build.make CMakeFiles/cmTC_9a444.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9a444.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=fseeko -std=c11 -o CMakeFiles/cmTC_9a444.dir/CheckFunctionExists.c.o -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_9a444
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a444.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=fseeko CMakeFiles/cmTC_9a444.dir/CheckFunctionExists.c.o -o cmTC_9a444 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_193c3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_193c3.dir/build.make CMakeFiles/cmTC_193c3.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_193c3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=fseeko -std=c11 -o CMakeFiles/cmTC_193c3.dir/CheckFunctionExists.c.o -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_193c3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_193c3.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=fseeko CMakeFiles/cmTC_193c3.dir/CheckFunctionExists.c.o -o cmTC_193c3 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the function strerror exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_0bc70/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0bc70.dir/build.make CMakeFiles/cmTC_0bc70.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_0bc70.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=strerror -std=c11 -o CMakeFiles/cmTC_0bc70.dir/CheckFunctionExists.c.o -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_0bc70
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0bc70.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=strerror CMakeFiles/cmTC_0bc70.dir/CheckFunctionExists.c.o -o cmTC_0bc70 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_e1afc/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e1afc.dir/build.make CMakeFiles/cmTC_e1afc.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1afc.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=strerror -std=c11 -o CMakeFiles/cmTC_e1afc.dir/CheckFunctionExists.c.o -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e1afc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1afc.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=strerror CMakeFiles/cmTC_e1afc.dir/CheckFunctionExists.c.o -o cmTC_e1afc 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Determining if the function posix_memalign exists passed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_9c63c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9c63c.dir/build.make CMakeFiles/cmTC_9c63c.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_9c63c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=posix_memalign   -D _POSIX_C_SOURCE=200112L -std=c11 -o CMakeFiles/cmTC_9c63c.dir/CheckFunctionExists.c.o -c /usr/share/cmake/Modules/CheckFunctionExists.c
-Linking C executable cmTC_9c63c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c63c.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=posix_memalign CMakeFiles/cmTC_9c63c.dir/CheckFunctionExists.c.o -o cmTC_9c63c 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_4a08c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4a08c.dir/build.make CMakeFiles/cmTC_4a08c.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4a08c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=posix_memalign   -D _POSIX_C_SOURCE=200112L -std=c11 -o CMakeFiles/cmTC_4a08c.dir/CheckFunctionExists.c.o -c /usr/share/cmake/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4a08c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4a08c.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DCHECK_FUNCTION_EXISTS=posix_memalign CMakeFiles/cmTC_4a08c.dir/CheckFunctionExists.c.o -o cmTC_4a08c 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 
 Performing C SOURCE FILE Test HAVE_NO_INTERPOSITION succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_3c62b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_3c62b.dir/build.make CMakeFiles/cmTC_3c62b.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3c62b.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_NO_INTERPOSITION   -fno-semantic-interposition -std=c11 -o CMakeFiles/cmTC_3c62b.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_3c62b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c62b.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_NO_INTERPOSITION CMakeFiles/cmTC_3c62b.dir/src.c.o -o cmTC_3c62b 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_c2f6c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c2f6c.dir/build.make CMakeFiles/cmTC_c2f6c.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2f6c.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_NO_INTERPOSITION   -fno-semantic-interposition -std=c11 -o CMakeFiles/cmTC_c2f6c.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c2f6c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2f6c.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_NO_INTERPOSITION CMakeFiles/cmTC_c2f6c.dir/src.c.o -o cmTC_c2f6c 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
 int main(void) { return 0; }
 Performing C SOURCE FILE Test HAVE_ATTRIBUTE_VISIBILITY_HIDDEN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_08287/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_08287.dir/build.make CMakeFiles/cmTC_08287.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_08287.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_HIDDEN -std=c11 -o CMakeFiles/cmTC_08287.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_08287
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_08287.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_HIDDEN CMakeFiles/cmTC_08287.dir/src.c.o -o cmTC_08287 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_aa3d4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aa3d4.dir/build.make CMakeFiles/cmTC_aa3d4.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa3d4.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_HIDDEN -std=c11 -o CMakeFiles/cmTC_aa3d4.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_aa3d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa3d4.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_HIDDEN CMakeFiles/cmTC_aa3d4.dir/src.c.o -o cmTC_aa3d4 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -387,16 +387,16 @@ Source file was:
         return 0;
     }
 Performing C SOURCE FILE Test HAVE_ATTRIBUTE_VISIBILITY_INTERNAL succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_f034f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_f034f.dir/build.make CMakeFiles/cmTC_f034f.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f034f.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_INTERNAL -std=c11 -o CMakeFiles/cmTC_f034f.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_f034f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f034f.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_INTERNAL CMakeFiles/cmTC_f034f.dir/src.c.o -o cmTC_f034f 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_6096b/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_6096b.dir/build.make CMakeFiles/cmTC_6096b.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6096b.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_INTERNAL -std=c11 -o CMakeFiles/cmTC_6096b.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6096b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6096b.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_ATTRIBUTE_VISIBILITY_INTERNAL CMakeFiles/cmTC_6096b.dir/src.c.o -o cmTC_6096b 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -406,16 +406,16 @@ Source file was:
         return 0;
     }
 Performing C SOURCE FILE Test HAVE_BUILTIN_CTZ succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_49d30/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_49d30.dir/build.make CMakeFiles/cmTC_49d30.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_49d30.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZ -std=c11 -o CMakeFiles/cmTC_49d30.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_49d30
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49d30.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZ CMakeFiles/cmTC_49d30.dir/src.c.o -o cmTC_49d30 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_7a2fb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7a2fb.dir/build.make CMakeFiles/cmTC_7a2fb.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a2fb.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZ -std=c11 -o CMakeFiles/cmTC_7a2fb.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_7a2fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a2fb.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZ CMakeFiles/cmTC_7a2fb.dir/src.c.o -o cmTC_7a2fb 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -426,16 +426,16 @@ int main(void) {
         return 0;
     }
 Performing C SOURCE FILE Test HAVE_BUILTIN_CTZLL succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_a13a9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a13a9.dir/build.make CMakeFiles/cmTC_a13a9.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a13a9.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZLL -std=c11 -o CMakeFiles/cmTC_a13a9.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_a13a9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a13a9.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZLL CMakeFiles/cmTC_a13a9.dir/src.c.o -o cmTC_a13a9 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_5bce3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5bce3.dir/build.make CMakeFiles/cmTC_5bce3.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5bce3.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZLL -std=c11 -o CMakeFiles/cmTC_5bce3.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5bce3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5bce3.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_BUILTIN_CTZLL CMakeFiles/cmTC_5bce3.dir/src.c.o -o cmTC_5bce3 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -446,16 +446,16 @@ int main(void) {
         return 0;
     }
 Performing C SOURCE FILE Test HAVE_PTRDIFF_T succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_4aa1d/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_4aa1d.dir/build.make CMakeFiles/cmTC_4aa1d.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4aa1d.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PTRDIFF_T -std=c11 -o CMakeFiles/cmTC_4aa1d.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4aa1d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4aa1d.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PTRDIFF_T CMakeFiles/cmTC_4aa1d.dir/src.c.o -o cmTC_4aa1d 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_dacdf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_dacdf.dir/build.make CMakeFiles/cmTC_dacdf.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dacdf.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PTRDIFF_T -std=c11 -o CMakeFiles/cmTC_dacdf.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_dacdf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dacdf.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PTRDIFF_T CMakeFiles/cmTC_dacdf.dir/src.c.o -o cmTC_dacdf 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -466,16 +466,16 @@ Source file was:
          return 0;
     }
 Performing C SOURCE FILE Test HAVE_AVX2_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_15904/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_15904.dir/build.make CMakeFiles/cmTC_15904.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_15904.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX2_INTRIN -mavx2 -std=c11 -o CMakeFiles/cmTC_15904.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_15904
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_15904.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX2_INTRIN -mavx2 CMakeFiles/cmTC_15904.dir/src.c.o -o cmTC_15904 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_312d9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_312d9.dir/build.make CMakeFiles/cmTC_312d9.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_312d9.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX2_INTRIN -mavx2 -std=c11 -o CMakeFiles/cmTC_312d9.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_312d9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_312d9.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX2_INTRIN -mavx2 CMakeFiles/cmTC_312d9.dir/src.c.o -o cmTC_312d9 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -488,16 +488,16 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_SSE41_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_02049/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_02049.dir/build.make CMakeFiles/cmTC_02049.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_02049.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE41_INTRIN -msse4.1 -std=c11 -o CMakeFiles/cmTC_02049.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_02049
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_02049.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE41_INTRIN -msse4.1 CMakeFiles/cmTC_02049.dir/src.c.o -o cmTC_02049 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_70657/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_70657.dir/build.make CMakeFiles/cmTC_70657.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_70657.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE41_INTRIN -msse4.1 -std=c11 -o CMakeFiles/cmTC_70657.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_70657
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70657.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE41_INTRIN -msse4.1 CMakeFiles/cmTC_70657.dir/src.c.o -o cmTC_70657 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -511,16 +511,16 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_SSE42CRC_INLINE_ASM succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_d1771/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d1771.dir/build.make CMakeFiles/cmTC_d1771.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_d1771.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INLINE_ASM -msse4.2 -std=c11 -o CMakeFiles/cmTC_d1771.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_d1771
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1771.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INLINE_ASM -msse4.2 CMakeFiles/cmTC_d1771.dir/src.c.o -o cmTC_d1771 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_8b098/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8b098.dir/build.make CMakeFiles/cmTC_8b098.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8b098.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INLINE_ASM -msse4.2 -std=c11 -o CMakeFiles/cmTC_8b098.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8b098
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8b098.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INLINE_ASM -msse4.2 CMakeFiles/cmTC_8b098.dir/src.c.o -o cmTC_8b098 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -534,16 +534,16 @@ int main(void) {
             return (int)h;
         }
 Performing C SOURCE FILE Test HAVE_SSE42CRC_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_7eab7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7eab7.dir/build.make CMakeFiles/cmTC_7eab7.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7eab7.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INTRIN -msse4.2 -std=c11 -o CMakeFiles/cmTC_7eab7.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_7eab7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7eab7.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INTRIN -msse4.2 CMakeFiles/cmTC_7eab7.dir/src.c.o -o cmTC_7eab7 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_8e3a1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8e3a1.dir/build.make CMakeFiles/cmTC_8e3a1.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8e3a1.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INTRIN -msse4.2 -std=c11 -o CMakeFiles/cmTC_8e3a1.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_8e3a1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e3a1.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CRC_INTRIN -msse4.2 CMakeFiles/cmTC_8e3a1.dir/src.c.o -o cmTC_8e3a1 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -560,16 +560,16 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_SSE42CMPSTR_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_70b21/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_70b21.dir/build.make CMakeFiles/cmTC_70b21.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_70b21.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CMPSTR_INTRIN -msse4.2 -std=c11 -o CMakeFiles/cmTC_70b21.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_70b21
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70b21.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CMPSTR_INTRIN -msse4.2 CMakeFiles/cmTC_70b21.dir/src.c.o -o cmTC_70b21 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_e1986/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e1986.dir/build.make CMakeFiles/cmTC_e1986.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e1986.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CMPSTR_INTRIN -msse4.2 -std=c11 -o CMakeFiles/cmTC_e1986.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_e1986
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e1986.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE42CMPSTR_INTRIN -msse4.2 CMakeFiles/cmTC_e1986.dir/src.c.o -o cmTC_e1986 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -583,16 +583,16 @@ Source file was:
             return _mm_cmpestri(xmm_src0, 16, xmm_src1, 16, 0);
         }
 Performing C SOURCE FILE Test HAVE_SSE2_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_e01cf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e01cf.dir/build.make CMakeFiles/cmTC_e01cf.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e01cf.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE2_INTRIN -msse2 -std=c11 -o CMakeFiles/cmTC_e01cf.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_e01cf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e01cf.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE2_INTRIN -msse2 CMakeFiles/cmTC_e01cf.dir/src.c.o -o cmTC_e01cf 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_9c4e1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9c4e1.dir/build.make CMakeFiles/cmTC_9c4e1.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9c4e1.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE2_INTRIN -msse2 -std=c11 -o CMakeFiles/cmTC_9c4e1.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9c4e1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c4e1.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSE2_INTRIN -msse2 CMakeFiles/cmTC_9c4e1.dir/src.c.o -o cmTC_9c4e1 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -603,16 +603,16 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_SSSE3_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_e6db6/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e6db6.dir/build.make CMakeFiles/cmTC_e6db6.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e6db6.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSSE3_INTRIN -mssse3 -std=c11 -o CMakeFiles/cmTC_e6db6.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_e6db6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6db6.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSSE3_INTRIN -mssse3 CMakeFiles/cmTC_e6db6.dir/src.c.o -o cmTC_e6db6 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_d2b18/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d2b18.dir/build.make CMakeFiles/cmTC_d2b18.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2b18.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSSE3_INTRIN -mssse3 -std=c11 -o CMakeFiles/cmTC_d2b18.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_d2b18
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2b18.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_SSSE3_INTRIN -mssse3 CMakeFiles/cmTC_d2b18.dir/src.c.o -o cmTC_d2b18 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:
@@ -626,16 +626,16 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_PCLMULQDQ_INTRIN succeeded with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_b8b7c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b8b7c.dir/build.make CMakeFiles/cmTC_b8b7c.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b8b7c.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PCLMULQDQ_INTRIN -mpclmul -std=c11 -o CMakeFiles/cmTC_b8b7c.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_b8b7c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8b7c.dir/link.txt --verbose=1
-/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PCLMULQDQ_INTRIN -mpclmul CMakeFiles/cmTC_b8b7c.dir/src.c.o -o cmTC_b8b7c 
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_840b9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_840b9.dir/build.make CMakeFiles/cmTC_840b9.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_840b9.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PCLMULQDQ_INTRIN -mpclmul -std=c11 -o CMakeFiles/cmTC_840b9.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_840b9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_840b9.dir/link.txt --verbose=1
+/usr/bin/cc  -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_PCLMULQDQ_INTRIN -mpclmul CMakeFiles/cmTC_840b9.dir/src.c.o -o cmTC_840b9 
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
 
 
 Source file was:

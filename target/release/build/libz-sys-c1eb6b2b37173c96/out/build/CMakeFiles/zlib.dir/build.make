@@ -65,7 +65,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build
+CMAKE_BINARY_DIR = /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/zlib.dir/depend.make
@@ -78,7 +78,7 @@ include CMakeFiles/zlib.dir/flags.make
 
 CMakeFiles/zlib.dir/adler32.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/adler32.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/adler32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/zlib.dir/adler32.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/zlib.dir/adler32.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/adler32.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/adler32.c
 
 CMakeFiles/zlib.dir/adler32.c.i: cmake_force
@@ -91,7 +91,7 @@ CMakeFiles/zlib.dir/adler32.c.s: cmake_force
 
 CMakeFiles/zlib.dir/adler32_fold.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/adler32_fold.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/adler32_fold.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/zlib.dir/adler32_fold.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/zlib.dir/adler32_fold.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/adler32_fold.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/adler32_fold.c
 
 CMakeFiles/zlib.dir/adler32_fold.c.i: cmake_force
@@ -104,7 +104,7 @@ CMakeFiles/zlib.dir/adler32_fold.c.s: cmake_force
 
 CMakeFiles/zlib.dir/chunkset.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/chunkset.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/chunkset.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/zlib.dir/chunkset.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/zlib.dir/chunkset.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/chunkset.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/chunkset.c
 
 CMakeFiles/zlib.dir/chunkset.c.i: cmake_force
@@ -117,7 +117,7 @@ CMakeFiles/zlib.dir/chunkset.c.s: cmake_force
 
 CMakeFiles/zlib.dir/compare256.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/compare256.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/compare256.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/zlib.dir/compare256.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/zlib.dir/compare256.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/compare256.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/compare256.c
 
 CMakeFiles/zlib.dir/compare256.c.i: cmake_force
@@ -130,7 +130,7 @@ CMakeFiles/zlib.dir/compare256.c.s: cmake_force
 
 CMakeFiles/zlib.dir/compress.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/compress.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/compress.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/zlib.dir/compress.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/zlib.dir/compress.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/compress.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/compress.c
 
 CMakeFiles/zlib.dir/compress.c.i: cmake_force
@@ -143,7 +143,7 @@ CMakeFiles/zlib.dir/compress.c.s: cmake_force
 
 CMakeFiles/zlib.dir/cpu_features.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/cpu_features.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/cpu_features.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/zlib.dir/cpu_features.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/zlib.dir/cpu_features.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/cpu_features.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/cpu_features.c
 
 CMakeFiles/zlib.dir/cpu_features.c.i: cmake_force
@@ -156,7 +156,7 @@ CMakeFiles/zlib.dir/cpu_features.c.s: cmake_force
 
 CMakeFiles/zlib.dir/crc32_braid.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/crc32_braid.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/crc32_braid.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/zlib.dir/crc32_braid.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/zlib.dir/crc32_braid.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/crc32_braid.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/crc32_braid.c
 
 CMakeFiles/zlib.dir/crc32_braid.c.i: cmake_force
@@ -169,7 +169,7 @@ CMakeFiles/zlib.dir/crc32_braid.c.s: cmake_force
 
 CMakeFiles/zlib.dir/crc32_braid_comb.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/crc32_braid_comb.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/crc32_braid_comb.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/zlib.dir/crc32_braid_comb.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/zlib.dir/crc32_braid_comb.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/crc32_braid_comb.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/crc32_braid_comb.c
 
 CMakeFiles/zlib.dir/crc32_braid_comb.c.i: cmake_force
@@ -182,7 +182,7 @@ CMakeFiles/zlib.dir/crc32_braid_comb.c.s: cmake_force
 
 CMakeFiles/zlib.dir/crc32_fold.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/crc32_fold.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/crc32_fold.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/zlib.dir/crc32_fold.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/zlib.dir/crc32_fold.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/crc32_fold.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/crc32_fold.c
 
 CMakeFiles/zlib.dir/crc32_fold.c.i: cmake_force
@@ -195,7 +195,7 @@ CMakeFiles/zlib.dir/crc32_fold.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/zlib.dir/deflate.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/zlib.dir/deflate.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate.c
 
 CMakeFiles/zlib.dir/deflate.c.i: cmake_force
@@ -208,7 +208,7 @@ CMakeFiles/zlib.dir/deflate.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_fast.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_fast.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_fast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/zlib.dir/deflate_fast.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/zlib.dir/deflate_fast.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_fast.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_fast.c
 
 CMakeFiles/zlib.dir/deflate_fast.c.i: cmake_force
@@ -221,7 +221,7 @@ CMakeFiles/zlib.dir/deflate_fast.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_huff.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_huff.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_huff.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/zlib.dir/deflate_huff.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/zlib.dir/deflate_huff.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_huff.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_huff.c
 
 CMakeFiles/zlib.dir/deflate_huff.c.i: cmake_force
@@ -234,7 +234,7 @@ CMakeFiles/zlib.dir/deflate_huff.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_medium.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_medium.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_medium.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/zlib.dir/deflate_medium.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/zlib.dir/deflate_medium.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_medium.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_medium.c
 
 CMakeFiles/zlib.dir/deflate_medium.c.i: cmake_force
@@ -247,7 +247,7 @@ CMakeFiles/zlib.dir/deflate_medium.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_quick.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_quick.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_quick.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/zlib.dir/deflate_quick.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/zlib.dir/deflate_quick.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_quick.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_quick.c
 
 CMakeFiles/zlib.dir/deflate_quick.c.i: cmake_force
@@ -260,7 +260,7 @@ CMakeFiles/zlib.dir/deflate_quick.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_rle.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_rle.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_rle.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/zlib.dir/deflate_rle.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/zlib.dir/deflate_rle.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_rle.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_rle.c
 
 CMakeFiles/zlib.dir/deflate_rle.c.i: cmake_force
@@ -273,7 +273,7 @@ CMakeFiles/zlib.dir/deflate_rle.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_slow.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_slow.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_slow.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/zlib.dir/deflate_slow.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/zlib.dir/deflate_slow.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_slow.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_slow.c
 
 CMakeFiles/zlib.dir/deflate_slow.c.i: cmake_force
@@ -286,7 +286,7 @@ CMakeFiles/zlib.dir/deflate_slow.c.s: cmake_force
 
 CMakeFiles/zlib.dir/deflate_stored.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/deflate_stored.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_stored.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/zlib.dir/deflate_stored.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/zlib.dir/deflate_stored.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/deflate_stored.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/deflate_stored.c
 
 CMakeFiles/zlib.dir/deflate_stored.c.i: cmake_force
@@ -299,7 +299,7 @@ CMakeFiles/zlib.dir/deflate_stored.c.s: cmake_force
 
 CMakeFiles/zlib.dir/functable.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/functable.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/functable.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/zlib.dir/functable.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/zlib.dir/functable.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/functable.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/functable.c
 
 CMakeFiles/zlib.dir/functable.c.i: cmake_force
@@ -312,7 +312,7 @@ CMakeFiles/zlib.dir/functable.c.s: cmake_force
 
 CMakeFiles/zlib.dir/infback.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/infback.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/infback.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/zlib.dir/infback.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/zlib.dir/infback.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/infback.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/infback.c
 
 CMakeFiles/zlib.dir/infback.c.i: cmake_force
@@ -325,7 +325,7 @@ CMakeFiles/zlib.dir/infback.c.s: cmake_force
 
 CMakeFiles/zlib.dir/inffast.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/inffast.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/inffast.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/zlib.dir/inffast.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/zlib.dir/inffast.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/inffast.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/inffast.c
 
 CMakeFiles/zlib.dir/inffast.c.i: cmake_force
@@ -338,7 +338,7 @@ CMakeFiles/zlib.dir/inffast.c.s: cmake_force
 
 CMakeFiles/zlib.dir/inflate.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/inflate.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/inflate.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/zlib.dir/inflate.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/zlib.dir/inflate.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/inflate.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/inflate.c
 
 CMakeFiles/zlib.dir/inflate.c.i: cmake_force
@@ -351,7 +351,7 @@ CMakeFiles/zlib.dir/inflate.c.s: cmake_force
 
 CMakeFiles/zlib.dir/inftrees.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/inftrees.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/inftrees.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/zlib.dir/inftrees.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/zlib.dir/inftrees.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/inftrees.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/inftrees.c
 
 CMakeFiles/zlib.dir/inftrees.c.i: cmake_force
@@ -364,7 +364,7 @@ CMakeFiles/zlib.dir/inftrees.c.s: cmake_force
 
 CMakeFiles/zlib.dir/insert_string.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/insert_string.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/insert_string.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/zlib.dir/insert_string.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/zlib.dir/insert_string.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/insert_string.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/insert_string.c
 
 CMakeFiles/zlib.dir/insert_string.c.i: cmake_force
@@ -377,7 +377,7 @@ CMakeFiles/zlib.dir/insert_string.c.s: cmake_force
 
 CMakeFiles/zlib.dir/insert_string_roll.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/insert_string_roll.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/insert_string_roll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/zlib.dir/insert_string_roll.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/zlib.dir/insert_string_roll.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/insert_string_roll.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/insert_string_roll.c
 
 CMakeFiles/zlib.dir/insert_string_roll.c.i: cmake_force
@@ -390,7 +390,7 @@ CMakeFiles/zlib.dir/insert_string_roll.c.s: cmake_force
 
 CMakeFiles/zlib.dir/slide_hash.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/slide_hash.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/slide_hash.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/zlib.dir/slide_hash.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/zlib.dir/slide_hash.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/slide_hash.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/slide_hash.c
 
 CMakeFiles/zlib.dir/slide_hash.c.i: cmake_force
@@ -403,7 +403,7 @@ CMakeFiles/zlib.dir/slide_hash.c.s: cmake_force
 
 CMakeFiles/zlib.dir/trees.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/trees.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/trees.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/zlib.dir/trees.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/zlib.dir/trees.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/trees.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/trees.c
 
 CMakeFiles/zlib.dir/trees.c.i: cmake_force
@@ -416,7 +416,7 @@ CMakeFiles/zlib.dir/trees.c.s: cmake_force
 
 CMakeFiles/zlib.dir/uncompr.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/uncompr.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/uncompr.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/zlib.dir/uncompr.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/zlib.dir/uncompr.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/uncompr.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/uncompr.c
 
 CMakeFiles/zlib.dir/uncompr.c.i: cmake_force
@@ -429,7 +429,7 @@ CMakeFiles/zlib.dir/uncompr.c.s: cmake_force
 
 CMakeFiles/zlib.dir/zutil.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/zutil.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/zutil.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/zlib.dir/zutil.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/zlib.dir/zutil.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/zutil.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/zutil.c
 
 CMakeFiles/zlib.dir/zutil.c.i: cmake_force
@@ -442,7 +442,7 @@ CMakeFiles/zlib.dir/zutil.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/x86_features.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/x86_features.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/x86_features.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/zlib.dir/arch/x86/x86_features.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/zlib.dir/arch/x86/x86_features.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/arch/x86/x86_features.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/x86_features.c
 
 CMakeFiles/zlib.dir/arch/x86/x86_features.c.i: cmake_force
@@ -455,7 +455,7 @@ CMakeFiles/zlib.dir/arch/x86/x86_features.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/slide_hash_avx2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -mavx2 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/slide_hash_avx2.c
 
 CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.i: cmake_force
@@ -468,7 +468,7 @@ CMakeFiles/zlib.dir/arch/x86/slide_hash_avx2.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/chunkset_avx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -mavx2 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/chunkset_avx.c
 
 CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.i: cmake_force
@@ -481,7 +481,7 @@ CMakeFiles/zlib.dir/arch/x86/chunkset_avx.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/compare256_avx2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -mavx2 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/compare256_avx2.c
 
 CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.i: cmake_force
@@ -494,7 +494,7 @@ CMakeFiles/zlib.dir/arch/x86/compare256_avx2.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/adler32_avx2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -mavx2 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/adler32_avx2.c
 
 CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.i: cmake_force
@@ -507,7 +507,7 @@ CMakeFiles/zlib.dir/arch/x86/adler32_avx2.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/chunkset_sse41.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -msse4.1 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/chunkset_sse41.c
 
 CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.i: cmake_force
@@ -520,7 +520,7 @@ CMakeFiles/zlib.dir/arch/x86/chunkset_sse41.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/adler32_sse42.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -msse4.2 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/adler32_sse42.c
 
 CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.i: cmake_force
@@ -533,7 +533,7 @@ CMakeFiles/zlib.dir/arch/x86/adler32_sse42.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/insert_string_sse42.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building C object CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -msse4.2 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/insert_string_sse42.c
 
 CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.i: cmake_force
@@ -546,7 +546,7 @@ CMakeFiles/zlib.dir/arch/x86/insert_string_sse42.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/chunkset_sse2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building C object CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/chunkset_sse2.c
 
 CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.i: cmake_force
@@ -559,7 +559,7 @@ CMakeFiles/zlib.dir/arch/x86/chunkset_sse2.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/compare256_sse2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/compare256_sse2.c
 
 CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.i: cmake_force
@@ -572,7 +572,7 @@ CMakeFiles/zlib.dir/arch/x86/compare256_sse2.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/slide_hash_sse2.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/slide_hash_sse2.c
 
 CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.i: cmake_force
@@ -585,7 +585,7 @@ CMakeFiles/zlib.dir/arch/x86/slide_hash_sse2.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/adler32_ssse3.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -mssse3 -fno-lto -o CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/adler32_ssse3.c
 
 CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.i: cmake_force
@@ -598,7 +598,7 @@ CMakeFiles/zlib.dir/arch/x86/adler32_ssse3.c.s: cmake_force
 
 CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/crc32_fold_pclmulqdq.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -mssse3 -msse4.2 -mpclmul -fno-lto -o CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/arch/x86/crc32_fold_pclmulqdq.c
 
 CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.i: cmake_force
@@ -611,7 +611,7 @@ CMakeFiles/zlib.dir/arch/x86/crc32_fold_pclmulqdq.c.s: cmake_force
 
 CMakeFiles/zlib.dir/gzlib.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/gzlib.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/gzlib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/zlib.dir/gzlib.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/zlib.dir/gzlib.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/gzlib.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/gzlib.c
 
 CMakeFiles/zlib.dir/gzlib.c.i: cmake_force
@@ -624,20 +624,20 @@ CMakeFiles/zlib.dir/gzlib.c.s: cmake_force
 
 CMakeFiles/zlib.dir/gzread.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/gzread.c.o: gzread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/zlib.dir/gzread.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/gzread.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/gzread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building C object CMakeFiles/zlib.dir/gzread.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/gzread.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/gzread.c
 
 CMakeFiles/zlib.dir/gzread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zlib.dir/gzread.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/gzread.c > CMakeFiles/zlib.dir/gzread.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/gzread.c > CMakeFiles/zlib.dir/gzread.c.i
 
 CMakeFiles/zlib.dir/gzread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zlib.dir/gzread.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/gzread.c -o CMakeFiles/zlib.dir/gzread.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/gzread.c -o CMakeFiles/zlib.dir/gzread.c.s
 
 CMakeFiles/zlib.dir/gzwrite.c.o: CMakeFiles/zlib.dir/flags.make
 CMakeFiles/zlib.dir/gzwrite.c.o: /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/gzwrite.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/zlib.dir/gzwrite.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building C object CMakeFiles/zlib.dir/gzwrite.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zlib.dir/gzwrite.c.o -c /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng/gzwrite.c
 
 CMakeFiles/zlib.dir/gzwrite.c.i: cmake_force
@@ -744,7 +744,7 @@ libz.a: CMakeFiles/zlib.dir/gzread.c.o
 libz.a: CMakeFiles/zlib.dir/gzwrite.c.o
 libz.a: CMakeFiles/zlib.dir/build.make
 libz.a: CMakeFiles/zlib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking C static library libz.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking C static library libz.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/zlib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/zlib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -758,6 +758,6 @@ CMakeFiles/zlib.dir/clean:
 .PHONY : CMakeFiles/zlib.dir/clean
 
 CMakeFiles/zlib.dir/depend:
-	cd /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/zlib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/zlib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/zlib.dir/depend
 

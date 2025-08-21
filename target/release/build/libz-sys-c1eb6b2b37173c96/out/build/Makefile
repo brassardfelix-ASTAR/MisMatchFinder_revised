@@ -70,7 +70,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build
+CMAKE_BINARY_DIR = /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -145,9 +145,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

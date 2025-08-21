@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out")
+  set(CMAKE_INSTALL_PREFIX "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,62 +44,62 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/libz.a")
+   "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/libz.a")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib" TYPE STATIC_LIBRARY FILES "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/libz.a")
+file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib" TYPE STATIC_LIBRARY FILES "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/libz.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zlib.h")
+   "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zlib.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include" TYPE FILE RENAME "zlib.h" FILES "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zlib.h")
+file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/include" TYPE FILE RENAME "zlib.h" FILES "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zlib.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zlib_name_mangling.h")
+   "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zlib_name_mangling.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include" TYPE FILE RENAME "zlib_name_mangling.h" FILES "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zlib_name_mangling.h")
+file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/include" TYPE FILE RENAME "zlib_name_mangling.h" FILES "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zlib_name_mangling.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zconf.h")
+   "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/include/zconf.h")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/include" TYPE FILE RENAME "zconf.h" FILES "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zconf.h")
+file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/include" TYPE FILE RENAME "zconf.h" FILES "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zconf.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/pkgconfig/zlib.pc")
+   "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/pkgconfig/zlib.pc")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/pkgconfig" TYPE FILE FILES "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zlib.pc")
+file(INSTALL DESTINATION "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/lib/pkgconfig" TYPE FILE FILES "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/zlib.pc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -110,5 +110,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,229 +1,174 @@
 use std::{
     cmp::{max, min},
-    collections::{BTreeMap, HashMap, HashSet},
+    collections::{BTreeMap, HashMap},
     ops::RangeInclusive,
 };
 
 use log::{debug, info, warn};
-use rust_htslib::bam::{self, record::Aux, Read, Record};
+
+use rust_htslib::bam::{self, record::{Aux}, Read, Record};
+
+
+
+#[derive(Clone, Copy, Debug, Default)]
+pub struct SupportStats {
+    pub count: usize,
+    pub sum_edit_dist: i64,
+    pub sum_frag_size: i64,
+    pub sum_avg_base_qual: f64,
+    pub sum_mapq: i64,
+    pub overlap_count: usize,
+    pub rp_agree_count: usize,
+}
 
 use crate::bamreader::{
-    cigar::parse_cigar_str,
-    fragments::Fragment,
+    cigar::{parse_cigar_str},
+    fragment::Fragment,
 };
 
-use self::filter::region::BedObject;
-
-use crate::bamreader::mismatch::{Mismatch, MismatchType};
+use self::{
+    filter::{region::BedObject},
+    mismatch::Mismatch,
+};
 
 pub mod cigar;
 pub mod filter;
-pub mod fragments; // src/bamreader/fragments.rs
+pub mod fragment;
 pub mod mismatch;
 
-/// Normalize a Mismatch for use as a map key so fragments at the same locus coalesce
-/// without altering allele strings expected by downstream filters (e.g., germline).
-/// - Keep REF/ALT exactly as constructed upstream (SBS 3-mer, DBS 2-mer, indels unchanged)
-/// - Strip per-fragment/read fields that should NOT shard grouping
-fn canonical_key(mut m: Mismatch) -> Mismatch {
-    // DO NOT collapse REF/ALT here; germline filter expects SBS as 3-mer.
-    // Just neutralize fields that are read/fragment-specific.
-    m.rid = 0;
-    m.quality = 0;
-    m.fragment_length = None;
-    m.read_orientation = None;
-    m.region_tag = None;
-    m.pos_in_read = None;
-    m
-}
-
-/// Make a stable "pair id" from a read's QNAME so both mates share the same ID.
-/// Strips common PE suffixes like "/1" or "/2", and Illumina lane suffixes " ... 1:N:0:..." etc.
-fn pair_id_from_record(rec: &Record) -> String {
-    let mut id = std::str::from_utf8(rec.qname()).unwrap_or_default().to_string();
-    // trailing "/1" or "/2"
-    if id.ends_with("/1") || id.ends_with("/2") {
-        id.truncate(id.len() - 2);
-        return id;
-    }
-    // Illumina style: "... 1:N:0:ACGT" or "... 2:N:0:ACGT"
-    if let Some(space_idx) = id.rfind(' ') {
-        let (left, right) = id.split_at(space_idx + 1);
-        if right.starts_with('1') || right.starts_with('2') {
-            return left.trim_end().to_string();
-        }
-    }
-    id
-}
-
-#[derive(Debug, Default)]
-pub struct MismatchMeta {
-    // Unique pair ids (for correct RP_COUNT)
-    pub rp_set: HashSet<String>,
-    // Short preview list for VCF (bounded; values drawn from rp_set insertion order)
-    pub rp_names: Vec<String>,
-
-    pub mapq: Vec<u8>,
-    pub nm: Vec<u8>,
-    pub frag_len: Vec<u32>,
-    pub strand: Vec<String>,
-    pub pos_in_read: Vec<usize>,
-    pub overlap: Option<bool>,
-    pub agree: Option<bool>,
-}
-
-impl MismatchMeta {
-    /// Add one fragment/read's contribution into the meta
-    fn add_fragment(
-        &mut self,
-        pair_id: String,
-        mapq: u8,
-        nm: u8,
-        frag_len: u32,
-        strand: Option<char>,
-        pos_in_read: Option<usize>,
-        overlap: Option<bool>,
-        agree: Option<bool>,
-    ) {
-        // Dedup RP while keeping a small preview list
-        if self.rp_set.insert(pair_id.clone()) {
-            if self.rp_names.len() < 10 {
-                self.rp_names.push(pair_id);
-            }
-        }
-        self.mapq.push(mapq);
-        self.nm.push(nm);
-        self.frag_len.push(frag_len);
-        if let Some(s) = strand {
-            self.strand.push(s.to_string());
-        }
-        if let Some(p) = pos_in_read {
-            self.pos_in_read.push(p);
-        }
-        // These are per-variant flags; if already set, leave as-is, otherwise set.
-        if self.overlap.is_none() {
-            self.overlap = overlap;
-        }
-        if self.agree.is_none() {
-            self.agree = agree;
-        }
-    }
-}
-
-// Make the thresholds u8 to match NM getter and avoid i8/u8 clashes
 pub fn find_mismatches(
     bam: &mut bam::Reader,
     white_list: &Option<BedObject>,
     fragment_length_intervals: &Vec<RangeInclusive<i64>>,
-    min_edit_distance_per_read: u8,
-    max_edit_distance_per_read: u8,
+    min_edit_distance_per_read: i8,
+    max_edit_distance_per_read: i8,
     min_mapping_quality: u8,
     min_avg_base_quality: f32,
     min_base_quality: u8,
     only_overlap: bool,
     strict_overlap: bool,
-) -> BTreeMap<Mismatch, MismatchMeta> {
-    // store all mismatches found
-    let mut mismatch_store: BTreeMap<Mismatch, MismatchMeta> = BTreeMap::new();
 
-    // map tid -> chromosome
+) -> BTreeMap<Mismatch, SupportStats> {
+
+        //store all mismatches found and how often they were found (we also know its going to be a big hash)
+        let mut mismatch_store: BTreeMap<Mismatch, SupportStats> = BTreeMap::new();
+
+    //get the header for the mapping of tid to chromosome name
     let mut tid_map: HashMap<i32, String> = HashMap::new();
     {
         let header = bam.header();
-        for (id, chr) in header.target_names().into_iter().enumerate() {
+        let seqnames = header.target_names().into_iter();
+
+        for (id, chr) in seqnames.enumerate() {
             tid_map.insert(
                 id as i32,
-                String::from_utf8(chr.to_vec()).expect("Could not convert tid to String"),
+                String::from_utf8(chr.to_vec()).expect("We couldnt fonvert the tid to String"),
             );
         }
     }
+
+
 
     let mut counter = 0;
     let mut last_chr = &String::from("*");
     let mut last_pos = -1;
 
-    // simple counters
-    let mut fragments_total = 0;
-    let mut fragments_analysed = 0;
-    let mut fragments_wrong_length = 0;
-    let mut fragments_low_base_quality = 0;
 
-    // cache mates by qname
+    // count stats
+    let mut fragments_total =0;
+    let mut fragments_analysed =0;
+    let mut fragments_wrong_length =0;
+    let mut fragments_low_base_quality =0;
+
+
+    //we create a read cache and set the initial capacity to 10k to reduce the reallocation operations
     let mut read_cache: HashMap<String, Record> = HashMap::with_capacity(10000);
 
+
     for r in bam.records() {
-        let record = match r {
-            Ok(rec) => rec,
-            Err(e) => {
-                warn!("Failed to parse BAM record: {}", e);
-                continue;
-            }
-        };
+        let record = r.unwrap();
+
 
         let qname = std::str::from_utf8(record.qname()).unwrap().to_owned();
 
+        //println!("Read name: {qname}");
         counter += 1;
         if counter % 500000 == 0 {
             info!(
-                "Read through {counter} reads - last position: {}:{}",
-                last_chr, last_pos
-            );
+                    "Read through {counter} reads - last position: {}:{}",
+                    last_chr ,
+                    last_pos
+                );
+            
+        
         }
 
-        if !record.is_paired() {
-            // skip low quality / non-primary / unmapped
-            if record.is_secondary()
-                || record.is_supplementary()
-                || record.is_unmapped()
-                || record.is_duplicate()
-                || record.is_quality_check_failed()
-                || record.mapq() < min_mapping_quality
-            {
+        if !record.is_paired(){
+
+            // we skipp anything that isnt high quality
+            if record.is_secondary() 
+            || record.is_supplementary() 
+            || record.is_unmapped() 
+            || record.is_duplicate() 
+            || record.is_quality_check_failed() 
+            || record.mapq() < min_mapping_quality {
                 continue;
             }
 
-            debug!("Working on single end read: {}", qname);
+            debug!("Working on single end read: {} ", std::str::from_utf8(record.qname()).unwrap());
 
-            // XA tag indicates alt mappings
+            //if the read has any additional mapping locations, we cant really trust the alignment as much
             if let Ok(_) = record.aux(b"XA") {
                 continue;
             }
 
-            fragments_total += 1;
+            // from here on we think this is a proper fragment that could be in the analysis
+            fragments_total += 1;    
 
+            // get the chromosome the record is on
             let chrom = tid_map.get(&record.tid()).unwrap();
             last_chr = chrom;
             last_pos = record.pos();
 
-            let edit_dist: u8 = get_edit_distance(&record);
-            if edit_dist >= min_edit_distance_per_read && edit_dist <= max_edit_distance_per_read {
-                // approximate fragment size by read length
+            let edit_dist = get_edit_distance(&record);
+            if  edit_dist >= min_edit_distance_per_read && edit_dist <= max_edit_distance_per_read {
+
+                // we cant really do a fragment size check here, so we have to check the read length instead
                 let frag_size = record.seq_len() as i64;
+                // but we can only really estimate it
                 let mut skip = true;
                 for ivl in fragment_length_intervals {
-                    if ivl.contains(&frag_size) { skip = false; }
+                    if ivl.contains(&frag_size) {
+                        //we are good here
+                        skip = false;
+                    }
                 }
                 if skip {
                     debug!("Discarded read due to wrong fragment size");
-                    fragments_wrong_length += 1;
+                    fragments_wrong_length += 1; 
                     continue;
                 }
 
-                // average base qual
+                //then we check for the average base quality of the read
                 if Fragment::average(record.qual()) < min_avg_base_quality {
                     fragments_low_base_quality += 1;
                     continue;
                 }
 
-                // cigar -> gapped read (no insertions)
+                // get only the aligned part of the read, without insertions
                 let read = parse_cigar_str(&record, chrom);
 
-                // whitelist check
-                let analyse = match white_list {
-                    Some(wl) => wl.has_overlap(chrom, read.start() as usize, read.end() as usize),
+                //check if the read is in the whitelist or if no white list was supplied 
+                let analyse = match white_list{
+                    Some(wl) => wl.has_overlap(
+                        chrom,
+                        read.start() as usize,
+                        read.end() as usize,
+                    ),
                     None => true,
-                };
 
+                };
+                
                 if analyse {
                     fragments_analysed += 1;
 
@@ -232,138 +177,162 @@ pub fn find_mismatches(
 
                     debug!("Found {} mismatches in fragment", mismatches.len());
 
-                    for mm in mismatches {
-                        // Coalesce by canonical key (alleles unchanged to keep SBS 3-mer)
-                        let key = canonical_key(mm.clone());
-                        let entry = mismatch_store.entry(key).or_default();
+                        for mm in mismatches {
+                            // Accumulate per-fragment stats for SE reads
+                            let edit = get_edit_distance(&record) as i64;
+                            let frag_size = record.seq_len() as i64;
+                            let avg_bq = Fragment::average(record.qual()) as f64;
+                            let mapq_avg = record.mapq() as i64;
+                            let stats = mismatch_store.entry(mm).or_insert(SupportStats::default());
+                            stats.count += 1;
+                            stats.sum_edit_dist += edit;
+                            stats.sum_frag_size += frag_size;
+                            stats.sum_avg_base_qual += avg_bq;
+                            stats.sum_mapq += mapq_avg;
+                            // No overlap or RP agreement in SE
+    }
 
-                        let pair_id = pair_id_from_record(&record);
-                        entry.add_fragment(
-                            pair_id,
-                            record.mapq(),
-                            get_edit_distance(&record),
-                            record.seq_len() as u32,   // SE: use read length
-                            frag.strand(),             // Option<char>
-                            mm.pos_in_read,            // Option<usize>
-                            None,                      // overlap NA for SE
-                            None,                      // agree NA for SE
-                        );
-                    }
-                } else {
+                }else{
                     debug!("Discarded read due to whitelist check");
                 }
-            }
-        } else if read_cache.contains_key(&qname) {
-            // mate available: process PE fragment
 
-            // skip non-primary before pulling mate
-            if record.is_secondary() || record.is_supplementary() {
+            }
+
+
+        }else if read_cache.contains_key(&qname){
+
+            // we have to skip out of this if the read is a secondary (before we get the read from the cache)
+            if record.is_secondary() || record.is_supplementary(){
                 continue;
             }
 
+            // get and delete the record from the cache, because we dont want to bloat the storage
             let mate = read_cache.remove(&qname).unwrap();
 
-            debug!("Working on paired end read: {}", qname);
+            debug!("Working on paired end read: {} ", std::str::from_utf8(record.qname()).unwrap());
 
-            // fragment-level quality checks
-            if !(record.is_unmapped()
+            // we check all the quality of the read AND a few for the mate, because we need to be sure we have a proper
+            // pair 
+            if !(record.is_unmapped() 
                 || mate.is_unmapped()
                 || record.is_duplicate()
                 || mate.is_duplicate()
                 || record.is_quality_check_failed()
                 || mate.is_quality_check_failed()
                 || record.tid() != record.mtid()
+                // we use the average mapping quality of the read as the mapping quality of the fragment
                 || (record.mapq() + mate.mapq()) / 2 < min_mapping_quality)
             {
+
+                // get the chromosome the record is on (because we know they are both on the same)
                 let chrom = tid_map.get(&record.tid()).unwrap();
                 last_chr = chrom;
                 last_pos = record.pos();
 
-                if let Ok(_) = record.aux(b"XA") { continue; }
-                if let Ok(_) = mate.aux(b"XA")   { continue; }
+                //if the read has any additional mapping locations, we cant really trust the alignment as much
+                if let Ok(_) = record.aux(b"XA") {
+                    continue;
+                }
+                if let Ok(_) = mate.aux(b"XA") {
+                    continue;
+                }
 
+                // from here on we think this is a proper fragment that could be in the analysis
                 fragments_total += 1;
 
-                let read1_edit: u8 = get_edit_distance(&record);
-                let read2_edit: u8 = get_edit_distance(&mate);
+                // we check if the reads actually have any changes (edit distance), this contains both mismatches and
+                // insertions or deletions
+                let read1_edit = get_edit_distance(&record);
+                let read2_edit = get_edit_distance(&mate);
 
-                if (read1_edit >= min_edit_distance_per_read && read1_edit <= max_edit_distance_per_read)
-                    || (read2_edit >= min_edit_distance_per_read && read2_edit <= max_edit_distance_per_read)
-                {
+
+                //both reads need to be within the edit distance requirements
+                if (read1_edit >= min_edit_distance_per_read && read1_edit <= max_edit_distance_per_read) || (read2_edit >= min_edit_distance_per_read && read2_edit <= max_edit_distance_per_read) {
+                    //now we check if the fragment has the right size
                     let frag_size = record.insert_size().abs();
+                    // println!("Found fragment of size {frag_size}");
                     let mut skip = true;
                     for ivl in fragment_length_intervals {
-                        if ivl.contains(&frag_size) { skip = false; }
+                        if ivl.contains(&frag_size) {
+                            //we are good here
+                            skip = false;
+                        }
                     }
                     if skip {
                         debug!("Discarded read-pair due to wrong fragment size");
-                        fragments_wrong_length += 1;
+                        fragments_wrong_length +=1;
                         continue;
                     }
 
-                    if (Fragment::average(record.qual()) + Fragment::average(mate.qual())) / 2.0
+                    //then we check for the average base quality of the reads
+                    if (Fragment::average(record.qual()) + Fragment::average(mate.qual())) / 2.
                         < min_avg_base_quality
                     {
                         debug!("Discarded read-pair due to low average base quality");
-                        fragments_low_base_quality += 1;
+                        fragments_low_base_quality +=1;
                         continue;
                     }
 
+                    // get only the aligned part of the read, without insertions
                     let read1 = parse_cigar_str(&record, chrom);
                     let read2 = parse_cigar_str(&mate, chrom);
 
-                    let analyse = match white_list {
+
+                    //check if the read is in the whitelist or if no white list was supplied 
+                    let analyse = match white_list{
                         Some(wl) => wl.has_overlap(
                             chrom,
                             min(read1.start() as usize, read2.start() as usize),
                             max(read1.end() as usize, read2.end() as usize),
-                        ),
+                        ) ,
                         None => true,
+
                     };
-
+                    
                     if analyse {
-                        debug!("Analysing read(pair)");
-                        fragments_analysed += 1;
+                            debug!("Analysing read(pair)");
+                            fragments_analysed +=1;
 
-                        let frag = if read1.get_read_pos() <= read2.get_read_pos() {
-                            Fragment::make_fragment(read1, read2, only_overlap, strict_overlap, chrom)
-                        } else {
-                            Fragment::make_fragment(read2, read1, only_overlap, strict_overlap, chrom)
-                        };
-
-                        let mismatches = match &frag {
-                            Some(v) => v.get_mismatches(min_base_quality),
-                            None => Vec::new(),
-                        };
-
-                        debug!("Found {} mismatches in fragment", mismatches.len());
-
-                        for mm in mismatches {
-                            // Coalesce by canonical key (alleles unchanged to keep SBS 3-mer)
-                            let key = canonical_key(mm.clone());
-                            let entry = mismatch_store.entry(key).or_default();
-
-                            let pair_id = pair_id_from_record(&record);
-                            let (overlap_flag, agree_flag, strand_char) = if let Some(v) = &frag {
-                                (Some(v.is_overlapping()), v.reads_agree(&mm), v.strand())
+                            let res;
+                            let r1s = read1.start();
+                            let r1e = read1.end();
+                            let r2s = read2.start();
+                            let r2e = read2.end();
+                            let overlapped = std::cmp::min(r1e, r2e) > std::cmp::max(r1s, r2s);
+                            if read1.get_read_pos() <= read2.get_read_pos() {
+                                res =
+                                    Fragment::make_fragment(read1, read2, only_overlap, strict_overlap, chrom);
                             } else {
-                                (None, None, None)
+                                res =
+                                    Fragment::make_fragment(read2, read1, only_overlap, strict_overlap, chrom);
+                            }
+
+                            let mismatches = match res {
+                                Some(v) => v.get_mismatches(min_base_quality),
+                                None => Vec::new(),
                             };
 
-                            // Use read length to preserve prior behavior; switch to insert_size().abs() if desired.
-                            entry.add_fragment(
-                                pair_id,
-                                record.mapq(),
-                                get_edit_distance(&record),
-                                record.seq_len() as u32,
-                                strand_char,          // Option<char>
-                                mm.pos_in_read,       // Option<usize>
-                                overlap_flag,
-                                agree_flag,
-                            );
-                        }
+                            debug!("Found {} mismatches in fragment", mismatches.len());
+
+                            for mm in mismatches {
+                                // Accumulate per-fragment stats for PE reads
+                                let edit = ((read1_edit as i64 + read2_edit as i64) / 2) as i64;
+                                let frag_size_i = frag_size as i64;
+                                let avg_bq = ((Fragment::average(record.qual()) + Fragment::average(mate.qual())) / 2.0) as f64;
+                                let mapq_avg = ((record.mapq() as i64 + mate.mapq() as i64) / 2) as i64;
+                                let overlapped = overlapped;
+                                let stats = mismatch_store.entry(mm).or_insert(SupportStats::default());
+                                stats.count += 1;
+                                stats.sum_edit_dist += edit;
+                                stats.sum_frag_size += frag_size_i;
+                                stats.sum_avg_base_qual += avg_bq;
+                                stats.sum_mapq += mapq_avg;
+                                if overlapped { stats.overlap_count += 1; }
+                                // If strict_overlap is set, mismatches in overlap must agree
+                                if overlapped && strict_overlap { stats.rp_agree_count += 1; }
+    }
                     } else {
-                        debug!("Discarded read pair due to whitelist check");
+                                debug!("Discarded read pair due to whitelist check");
                     }
                 } else {
                     debug!("Discarded read pair due to wrong edit distance");
@@ -373,43 +342,44 @@ pub fn find_mismatches(
             }
 
             debug!("Done with read {}", &qname);
-        } else if !(record.is_supplementary() || record.is_secondary()) {
-            // cache this read until its mate arrives
+        // we dont check if the read is mapped here, so we get mapped and unmapped pairs as well
+        } else if !(record.is_supplementary()
+            || record.is_secondary()) {
             read_cache.insert(qname, record);
         } else {
-            // discard non-primary
+            // we do discard any additional reads, which are not primary alignment or not mapped to the same chromosome
         }
     }
 
-    // should have no reads left in cache
+    // if we have done everything correctly, we should have no reads in the cache anymore
     let mut break_out = 10;
-    let un_paired_reads = read_cache.len();
+    let un_paired_reads= read_cache.len();
     if un_paired_reads != 0 {
         warn!("Read cache contained unpaired read at the end of the analysis, this shouldnt happen with a well formed bam");
         for (qname, _) in read_cache {
             warn!("{qname}");
-            if break_out == 0 {
-                warn!("... and {} more", un_paired_reads - break_out);
+            if break_out == 0{
+                warn!("... and {} more", un_paired_reads-break_out);
                 break;
             }
-            break_out -= 1;
+            break_out-=1;
         }
     }
 
-    info! {"Analysed {fragments_total} fragments and {fragments_wrong_length} were excluded due to wrong length, leaving {fragments_analysed} after whitelist and base quality (excluded: {fragments_low_base_quality}) check"};
-    mismatch_store
+    info!{"Analysed {fragments_total} fragments and {fragments_wrong_length} were excluded due to wrong length, leaving {fragments_analysed} after whitelist and base quality (excluded: {fragments_low_base_quality}) check"};
+    return mismatch_store;
 }
 
-fn get_edit_distance(read: &Record) -> u8 {
+fn get_edit_distance(read: &Record) -> i8{
     match read.aux(b"NM") {
-        Ok(Aux::U8(v)) => v as u8,
-        Ok(Aux::I8(v)) => if v < 0 { 0 } else { v as u8 },
-        Ok(Aux::U16(v)) => v.min(u8::MAX as u16) as u8,
-        Ok(Aux::I16(v)) => if v < 0 { 0 } else { (v as u16).min(u8::MAX as u16) as u8 },
-        Ok(Aux::U32(v)) => v.min(u8::MAX as u32) as u8,
-        Ok(Aux::I32(v)) => if v < 0 { 0 } else { (v as u32).min(u8::MAX as u32) as u8 },
-        Ok(Aux::String(s)) => s.parse::<u32>().map(|x| x.min(u8::MAX as u32) as u8).unwrap_or(0),
+        // while technically the thing should only be I8, we accept other integer types as well
+        Ok(Aux::I8(nm_i)) => nm_i,
+        Ok(Aux::I16(nm_i)) => nm_i as i8,
+        Ok(Aux::I32(nm_i)) => nm_i as i8,
+        Ok(Aux::U8(nm_i)) => nm_i as i8,
+        Ok(Aux::U16(nm_i)) => nm_i as i8,
+        Ok(Aux::U32(nm_i)) => nm_i as i8,
+        // we just return the cigar ops necessary to make the read
         _ => 0,
     }
 }
-

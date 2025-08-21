@@ -1,7 +1,7 @@
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/install/strip.dir
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/edit_cache.dir
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/zlib.dir
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/rebuild_cache.dir
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/list_install_components.dir
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/install/local.dir
-/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/install.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/install/strip.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/edit_cache.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/zlib.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/rebuild_cache.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/list_install_components.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/install/local.dir
+/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/install.dir

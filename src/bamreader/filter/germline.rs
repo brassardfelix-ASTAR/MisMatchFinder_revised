@@ -9,6 +9,7 @@ use crate::bamreader::mismatch::MismatchType;
 
 use echtvar_lib::echtvar;
 use echtvar_lib::var32;
+use crate::bamreader::SupportStats;
 
 pub struct ZarrStorage {}
 
@@ -66,6 +67,15 @@ impl GermlineResource {
                             &mut 0,
                         );
 
+                        // println!(
+                        //     "Checking mismatch: {} with chr: {} start: {} pos: {} and ref: {} to alt: {} with enc: {}",
+                        //     mismatch,
+                        //     backend.chrom,
+                        //     backend.start,
+                        //     mismatch.position + 1,
+                        //     std::str::from_utf8(&mismatch.reference[1..2]).unwrap(),
+                        //     std::str::from_utf8(&mismatch.alternative[1..2]).unwrap(), enc,
+                        // );
                         return match backend.var32s.binary_search(&enc) {
                             Ok(_) => true,
                             Err(_) => false,
@@ -83,6 +93,16 @@ impl GermlineResource {
                                 &mismatch.alternative[internal_pos..(internal_pos + 1)],
                                 &mut 0,
                             );
+
+                            // println!(
+                            //     "Checking mismatch: {} with chr: {} start: {} pos: {} and ref: {} to alt: {} with enc: {}",
+                            //     mismatch,
+                            //     backend.chrom,
+                            //     backend.start,
+                            //     mismatch.position -1 + internal_pos as u32,
+                            //     std::str::from_utf8(&mismatch.reference[(internal_pos)..(internal_pos + 1)]).unwrap(),
+                            //     std::str::from_utf8(&mismatch.alternative[(internal_pos)..(internal_pos + 1)]).unwrap(), enc,
+                            // );
 
                             match backend.var32s.binary_search(&enc) {
                                 Ok(_) => {
@@ -136,8 +156,7 @@ impl GermlineResource {
         }
     }
 
-    pub fn filter_germline_cooccurance(&mut self, mismatches: &mut BTreeMap<Mismatch, usize>) {
+    pub fn filter_germline_cooccurance(&mut self, mismatches: &mut BTreeMap<Mismatch, SupportStats>) {
         mismatches.retain(|key, _| !self.is_present(key));
     }
 }
-

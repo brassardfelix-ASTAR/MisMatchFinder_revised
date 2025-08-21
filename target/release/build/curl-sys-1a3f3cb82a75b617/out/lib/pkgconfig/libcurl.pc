@@ -23,10 +23,10 @@
 # This should most probably benefit from getting a "Requires:" field added
 # dynamically by configure.
 #
-prefix=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/curl-sys-1a3f3cb82a75b617/out
+prefix=/home/users/astar/ares/felixrac/MMFv3/target/release/build/curl-sys-1a3f3cb82a75b617/out
 exec_prefix=
-libdir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/curl-sys-1a3f3cb82a75b617/out/lib
-includedir=/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/curl-sys-1a3f3cb82a75b617/out/include
+libdir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/curl-sys-1a3f3cb82a75b617/out/lib
+includedir=/home/users/astar/ares/felixrac/MMFv3/target/release/build/curl-sys-1a3f3cb82a75b617/out/include
 supported_protocols=""
 supported_features=""
 

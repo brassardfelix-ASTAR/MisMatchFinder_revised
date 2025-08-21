@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DHAVE_BUILTIN_CTZ -DHAVE_BUILTIN_CTZLL -DHAVE_POSIX_MEMALIGN -DHAVE_SYS_AUXV_H -DHAVE_SYS_SDT_H -DHAVE_VISIBILITY_HIDDEN -DHAVE_VISIBILITY_INTERNAL -DWITH_GZFILEOP -DX86_AVX2 -DX86_AVX2_ADLER32 -DX86_AVX_CHUNKSET -DX86_FEATURES -DX86_PCLMULQDQ_CRC -DX86_SSE2 -DX86_SSE2_CHUNKSET -DX86_SSE2_SLIDEHASH -DX86_SSE41 -DX86_SSE42_ADLER32 -DX86_SSE42_CRC_HASH -DX86_SSE42_CRC_INTRIN -DX86_SSSE3 -DX86_SSSE3_ADLER32 -DZLIB_COMPAT -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64
 
-C_INCLUDES = -I/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build -I/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng
+C_INCLUDES = -I/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build -I/home/users/astar/ares/felixrac/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/libz-sys-1.1.8/src/zlib-ng
 
 C_FLAGS =  -ffunction-sections -fdata-sections -fPIC -m64 -O2 -DNDEBUG -Wall -Wno-implicit-fallthrough -std=c11
 

@@ -1,15 +1,15 @@
 Performing C SOURCE FILE Test HAVE_AVX512_INTRIN failed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_68669/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_68669.dir/build.make CMakeFiles/cmTC_68669.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_68669.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX512_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_68669.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/gmake cmTC_78b52/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_78b52.dir/build.make CMakeFiles/cmTC_78b52.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_78b52.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX512_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_78b52.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
 cc1: error: bad value (‘cascadelake’) for ‘-mtune=’ switch
 cc1: note: valid arguments to ‘-mtune=’ switch are: nocona core2 nehalem corei7 westmere sandybridge corei7-avx ivybridge core-avx-i haswell core-avx2 broadwell skylake skylake-avx512 cannonlake icelake-client icelake-server bonnell atom silvermont slm knl knm intel x86-64 eden-x2 nano nano-1000 nano-2000 nano-3000 nano-x2 eden-x4 nano-x4 k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3 athlon-fx amdfam10 barcelona bdver1 bdver2 bdver3 bdver4 znver1 btver1 btver2 generic native; did you mean ‘cannonlake’?
-gmake[1]: *** [CMakeFiles/cmTC_68669.dir/build.make:85: CMakeFiles/cmTC_68669.dir/src.c.o] Error 1
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:140: cmTC_68669/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_78b52.dir/build.make:85: CMakeFiles/cmTC_78b52.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_78b52/fast] Error 2
 
 
 Source file was:
@@ -25,17 +25,17 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_MASK_INTRIN failed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_82532/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_82532.dir/build.make CMakeFiles/cmTC_82532.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_82532.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_MASK_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_82532.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/gmake cmTC_62c16/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_62c16.dir/build.make CMakeFiles/cmTC_62c16.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_62c16.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_MASK_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_62c16.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
 cc1: error: bad value (‘cascadelake’) for ‘-mtune=’ switch
 cc1: note: valid arguments to ‘-mtune=’ switch are: nocona core2 nehalem corei7 westmere sandybridge corei7-avx ivybridge core-avx-i haswell core-avx2 broadwell skylake skylake-avx512 cannonlake icelake-client icelake-server bonnell atom silvermont slm knl knm intel x86-64 eden-x2 nano nano-1000 nano-2000 nano-3000 nano-x2 eden-x4 nano-x4 k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3 athlon-fx amdfam10 barcelona bdver1 bdver2 bdver3 bdver4 znver1 btver1 btver2 generic native; did you mean ‘cannonlake’?
-gmake[1]: *** [CMakeFiles/cmTC_82532.dir/build.make:85: CMakeFiles/cmTC_82532.dir/src.c.o] Error 1
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:140: cmTC_82532/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_62c16.dir/build.make:85: CMakeFiles/cmTC_62c16.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_62c16/fast] Error 2
 
 
 Source file was:
@@ -47,17 +47,17 @@ Source file was:
             return 0;
         }
 Performing C SOURCE FILE Test HAVE_AVX512VNNI_INTRIN failed with the following output:
-Change Dir: /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
+Change Dir: /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/gmake cmTC_7c061/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7c061.dir/build.make CMakeFiles/cmTC_7c061.dir/build
-gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7c061.dir/src.c.o
-/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX512VNNI_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_7c061.dir/src.c.o -c /home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
+Run Build Command(s):/usr/bin/gmake cmTC_8852f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_8852f.dir/build.make CMakeFiles/cmTC_8852f.dir/build
+gmake[1]: Entering directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8852f.dir/src.c.o
+/usr/bin/cc   -ffunction-sections -fdata-sections -fPIC -m64 -DHAVE_AVX512VNNI_INTRIN -mavx512f -mavx512dq -mavx512bw -mavx512vl -mavx512vnni -mtune=cascadelake -std=c11 -o CMakeFiles/cmTC_8852f.dir/src.c.o -c /home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp/src.c
 cc1: error: bad value (‘cascadelake’) for ‘-mtune=’ switch
 cc1: note: valid arguments to ‘-mtune=’ switch are: nocona core2 nehalem corei7 westmere sandybridge corei7-avx ivybridge core-avx-i haswell core-avx2 broadwell skylake skylake-avx512 cannonlake icelake-client icelake-server bonnell atom silvermont slm knl knm intel x86-64 eden-x2 nano nano-1000 nano-2000 nano-3000 nano-x2 eden-x4 nano-x4 k8 k8-sse3 opteron opteron-sse3 athlon64 athlon64-sse3 athlon-fx amdfam10 barcelona bdver1 bdver2 bdver3 bdver4 znver1 btver1 btver2 generic native; did you mean ‘cannonlake’?
-gmake[1]: *** [CMakeFiles/cmTC_7c061.dir/build.make:85: CMakeFiles/cmTC_7c061.dir/src.c.o] Error 1
-gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMF_ChatGPT/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
-gmake: *** [Makefile:140: cmTC_7c061/fast] Error 2
+gmake[1]: *** [CMakeFiles/cmTC_8852f.dir/build.make:85: CMakeFiles/cmTC_8852f.dir/src.c.o] Error 1
+gmake[1]: Leaving directory '/home/users/astar/ares/felixrac/MMFv3/target/release/build/libz-sys-c1eb6b2b37173c96/out/build/CMakeFiles/CMakeTmp'
+gmake: *** [Makefile:140: cmTC_8852f/fast] Error 2
 
 
 Source file was:
