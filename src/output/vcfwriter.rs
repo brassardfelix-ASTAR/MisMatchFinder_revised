@@ -34,7 +34,7 @@ pub fn write_vcf(
     for (mm, stats) in mismatches {
         let read_support = stats.count as i64;
         let multi = read_support; // backward compatible
-        let edit_avg = if stats.count > 0 { (stats.sum_edit_dist as f64) / (stats.count as f64) } else { 0.0 };
+        let edit_avg = if stats.count > 0 { stats.sum_edit_dist / (stats.count as f64) } else { 0.0 };
         let frag_mean = if stats.count > 0 { (stats.sum_frag_size as f64) / (stats.count as f64) } else { 0.0 };
         let avg_bq = if stats.count > 0 { stats.sum_avg_base_qual / (stats.count as f64) } else { 0.0 };
         let mapq_avg = if stats.count > 0 { (stats.sum_mapq as f64) / (stats.count as f64) } else { 0.0 };
@@ -50,7 +50,6 @@ pub fn write_vcf(
                     let mut line = format!(
                         "{}\t{}\t.\t{}\t{}\t{}\tPASS\t{}",
                         mm.chromosome,
-                        // original code appears to use 1-based or as stored; keep as-is
                         mm.position,
                         std::str::from_utf8(&mm.reference[1..2]).unwrap(),
                         std::str::from_utf8(&mm.alternative[1..2]).unwrap(),
