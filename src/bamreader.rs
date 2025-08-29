@@ -1,6 +1,6 @@
 use std::{
     cmp::{max, min},
-    collections::{BTreeMap, HashMap},
+    collections::{BTreeMap, BTreeSet, HashMap},
     ops::RangeInclusive,
 };
 
@@ -145,10 +145,15 @@ pub fn find_mismatches(
 
                     for mm in mismatches {
                         // fragment-level stats (SE)
-                        let edit = get_edit_distance(&record) as f64; // whole-read NM (robust)
+                        let edit = get_edit_distance(&record) as f64; // whole-read NM
                         let frag_size = record.seq_len() as i64;
                         let avg_bq = Fragment::average(record.qual()) as f64;
-                        let mapq_avg = record.mapq() as i64;
+                        // (4) MAPQ_AVG: ignore 255 (unknown)
+                        let mapq_avg = if record.mapq() != 255 {
+                            record.mapq() as i64
+                        } else {
+                            0
+                        };
 
                         let stats = mismatch_store.entry(mm).or_insert(SupportStats::default());
                         stats.count += 1;
@@ -223,14 +228,15 @@ pub fn find_mismatches(
                     }
 
                     // aligned segments (no I)
-                    let read1 = parse_cigar_str(&record, chrom);
-                    let read2 = parse_cigar_str(&mate, chrom);
+                    let r1_ns = parse_cigar_str(&record, chrom);
+                    let r2_ns = parse_cigar_str(&mate, chrom);
 
+                    // whitelist window uses the non-strict build’s bounds
                     let analyse = match white_list {
                         Some(wl) => wl.has_overlap(
                             chrom,
-                            min(read1.start() as usize, read2.start() as usize),
-                            max(read1.end() as usize, read2.end() as usize),
+                            min(r1_ns.start() as usize, r2_ns.start() as usize),
+                            max(r1_ns.end() as usize, r2_ns.end() as usize),
                         ),
                         None => true,
                     };
@@ -239,50 +245,65 @@ pub fn find_mismatches(
                         debug!("Analysing read(pair)");
                         fragments_analysed += 1;
 
-                        let r1s = read1.start();
-                        let r1e = read1.end();
-                        let r2s = read2.start();
-                        let r2e = read2.end();
-
-                        // site-level overlap window [ovl_start, ovl_end)
+                        // overlap window from the non-strict build
+                        let r1s = r1_ns.start();
+                        let r1e = r1_ns.end();
+                        let r2s = r2_ns.start();
+                        let r2e = r2_ns.end();
                         let ovl_start = std::cmp::max(r1s, r2s);
                         let ovl_end = std::cmp::min(r1e, r2e);
 
-                        // build fragment in read order
-                        let res = if read1.get_read_pos() <= read2.get_read_pos() {
-                            Fragment::make_fragment(read1, read2, only_overlap, strict_overlap, chrom)
+                        // Build fragment with the user’s flags (may be strict=false)
+                        let res_ns = if r1_ns.get_read_pos() <= r2_ns.get_read_pos() {
+                            Fragment::make_fragment(r1_ns, r2_ns, only_overlap, strict_overlap, chrom)
                         } else {
-                            Fragment::make_fragment(read2, read1, only_overlap, strict_overlap, chrom)
+                            Fragment::make_fragment(r2_ns, r1_ns, only_overlap, strict_overlap, chrom)
                         };
 
-                        let mismatches = match res {
+                        let mismatches = match res_ns {
                             Some(v) => v.get_mismatches(min_base_quality),
                             None => Vec::new(),
+                        };
+
+                        // Build a second fragment with strict_overlap=true just to know which sites have mate agreement.
+                        // Parse again to avoid ownership moves.
+                        let r1_st = parse_cigar_str(&record, chrom);
+                        let r2_st = parse_cigar_str(&mate, chrom);
+                        let res_strict = if r1_st.get_read_pos() <= r2_st.get_read_pos() {
+                            Fragment::make_fragment(r1_st, r2_st, only_overlap, true, chrom)
+                        } else {
+                            Fragment::make_fragment(r2_st, r1_st, only_overlap, true, chrom)
+                        };
+                        let strict_set: BTreeSet<Mismatch> = match res_strict {
+                            Some(v) => v.get_mismatches(min_base_quality).into_iter().collect(),
+                            None => BTreeSet::new(),
                         };
 
                         debug!("Found {} mismatches in fragment", mismatches.len());
 
                         for mm in mismatches {
-                            // ---------- site-in-overlap (indel-aware) ----------
+                            // ----- site-in-overlap (indel/DBS-aware) -----
                             // mm.position is 1-based VCF POS (anchor base).
                             // Convert to 0-based anchor coordinate.
                             let anchor0 = mm.position as i64 - 1;
 
-                            // deletion length (positive if DEL)
                             let ref_len = mm.reference.len() as i64;
                             let alt_len = mm.alternative.len() as i64;
                             let del_len = ref_len - alt_len;
 
-                            // For deletions (REF>ALT), the deleted reference span is AFTER the anchor:
-                            // [del_start, del_end) = [anchor0 + 1, anchor0 + del_len + 1)
-                            // For SNP/DBS/INS, gate by the anchor base: [anchor0, anchor0+1)
+                            // (2) DBS overlap gating:
+                            //   - DEL (ref>alt): deleted span AFTER anchor -> [anchor0+1, anchor0+del_len+1)
+                            //   - SUBSTITUTION with len>1 (DBS): require full ref span -> [anchor0, anchor0+ref_len)
+                            //   - SNV or INS: gate by anchor base -> [anchor0, anchor0+1)
                             let (site_lo, site_hi) = if del_len > 0 {
                                 (anchor0 + 1, anchor0 + del_len + 1)
+                            } else if ref_len == alt_len && ref_len > 1 {
+                                (anchor0, anchor0 + ref_len)
                             } else {
                                 (anchor0, anchor0 + 1)
                             };
 
-                            // Is the (site or deleted span) contained within the mates' overlap window?
+                            // Is the (site/span) contained within the mates' overlap window?
                             let site_in_overlap = site_lo >= ovl_start && site_hi <= ovl_end;
 
                             // Enforce --only_overlaps at the SITE level
@@ -290,13 +311,28 @@ pub fn find_mismatches(
                                 continue;
                             }
 
-                            // ---------- accumulate fragment-level stats ----------
-                            // EDITDIST_AVG = mean of whole-read NM tags (robust to missing/stale NM)
+                            // ---------- fragment-level stats ----------
+                            // EDITDIST_AVG = mean of whole-read NM tags
                             let edit = (read1_edit as f64 + read2_edit as f64) / 2.0;
+
                             let frag_size_i = frag_size as i64;
                             let avg_bq = ((Fragment::average(record.qual())
                                 + Fragment::average(mate.qual())) / 2.0) as f64;
-                            let mapq_avg = ((record.mapq() as i64 + mate.mapq() as i64) / 2) as i64;
+
+                            // (4) MAPQ_AVG: ignore 255s
+                            let mut mapq_sum: i64 = 0;
+                            let mut mapq_n: i64 = 0;
+                            let m1 = record.mapq();
+                            let m2 = mate.mapq();
+                            if m1 != 255 {
+                                mapq_sum += m1 as i64;
+                                mapq_n += 1;
+                            }
+                            if m2 != 255 {
+                                mapq_sum += m2 as i64;
+                                mapq_n += 1;
+                            }
+                            let mapq_avg = if mapq_n > 0 { mapq_sum / mapq_n } else { 0 };
 
                             let stats = mismatch_store
                                 .entry(mm.clone())
@@ -309,9 +345,11 @@ pub fn find_mismatches(
 
                             if site_in_overlap {
                                 stats.overlap_count += 1;
-                                // Under --strict_overlaps, Fragment already ensures the pair agrees
-                                // on sites it emits. Count it once per supporting fragment.
-                                if strict_overlap {
+
+                                // (8) Count pair-agreement even when strict_overlap was OFF for the main call:
+                                // A mismatch "agrees" if it also appears in the strict build (same fragment),
+                                // AND the site is in the pair-overlap (by definition of RP_AGREE_COUNT field).
+                                if strict_set.contains(&mm) {
                                     stats.rp_agree_count += 1;
                                 }
                             }
@@ -354,12 +392,12 @@ pub fn find_mismatches(
 }
 
 // ---- NM helper with robust fallback ----
-// If NM is missing or stale (e.g. 0), compute a fallback from CIGAR(+MD) and use max(tag, fallback).
+// Prefer NM tag if present; otherwise compute a fallback.
+// (7) Avoid double-counting: if CIGAR::Diff was seen, do NOT also count MD mismatches.
 fn get_edit_distance(read: &Record) -> i8 {
-    // Try to read NM tag
-    let mut nm_from_tag: Option<i32> = None;
+    // Prefer NM tag when available
     if let Ok(aux) = read.aux(b"NM") {
-        nm_from_tag = Some(match aux {
+        let v = match aux {
             Aux::I8(n) => n as i32,
             Aux::I16(n) => n as i32,
             Aux::I32(n) => n as i32,
@@ -367,38 +405,42 @@ fn get_edit_distance(read: &Record) -> i8 {
             Aux::U16(n) => n as i32,
             Aux::U32(n) => n as i32,
             _ => 0,
-        });
+        };
+        return if v > i8::MAX as i32 { i8::MAX } else { v as i8 };
     }
 
-    // Fallback from CIGAR (+MD mismatches when needed)
+    // Fallback from CIGAR (+MD only if Diff not present)
     let mut nm_fallback: i32 = 0;
+    let mut saw_diff = false;
     for op in read.cigar().iter() {
         match *op {
-            Cigar::Ins(len) | Cigar::Del(len) | Cigar::Diff(len) => nm_fallback += len as i32,
+            Cigar::Ins(len) | Cigar::Del(len) => nm_fallback += len as i32,
+            Cigar::Diff(len) => {
+                nm_fallback += len as i32;
+                saw_diff = true;
+            }
             _ => {}
         }
     }
-    if let Ok(Aux::String(md_str)) = read.aux(b"MD") {
-        // Count mismatching letters outside deletion blocks
-        let mut in_del = false;
-        for ch in md_str.chars() {
-            match ch {
-                '^' => in_del = true,         // deletion (already counted via CIGAR)
-                '0'..='9' => in_del = false,  // run of matches
-                'A' | 'C' | 'G' | 'T' | 'N' => {
-                    if !in_del {
-                        nm_fallback += 1;
+    if !saw_diff {
+        if let Ok(Aux::String(md_str)) = read.aux(b"MD") {
+            // Count mismatching letters outside deletion blocks
+            let mut in_del = false;
+            for ch in md_str.chars() {
+                match ch {
+                    '^' => in_del = true,         // deletion (already counted via CIGAR)
+                    '0'..='9' => in_del = false,  // run of matches
+                    'A' | 'C' | 'G' | 'T' | 'N' => {
+                        if !in_del {
+                            nm_fallback += 1;
+                        }
                     }
+                    _ => {}
                 }
-                _ => {}
             }
         }
     }
 
-    let nm_use = match nm_from_tag {
-        Some(tag) => tag.max(nm_fallback),
-        None => nm_fallback,
-    };
-
-    if nm_use > i8::MAX as i32 { i8::MAX } else { nm_use as i8 }
+    if nm_fallback > i8::MAX as i32 { i8::MAX } else { nm_fallback as i8 }
 }
+
